@@ -43,7 +43,7 @@
             <li>
                 <a href="./?view=reservations">
                     <i class="fa fa-calendar"></i>
-                    <p>Citas</p>
+                    <p>Turnos</p>
                 </a>
             </li>
             <li>

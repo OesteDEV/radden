@@ -1,7 +1,4 @@
-/*
-* BookMedik Database
-* @author Evilnapsis
-*/
+
 create database bookmedik;
 use bookmedik; 
 set sql_mode='';

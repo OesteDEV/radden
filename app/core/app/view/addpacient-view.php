@@ -1,10 +1,4 @@
 <?php
-/**
-* BookMedik
-* @author evilnapsis
-* @url http://evilnapsis.com/about/
-**/
-
 if(count($_POST)>0){
 	$user = new PacientData();
 	$user->name = $_POST["name"];
@@ -25,8 +19,5 @@ if(count($_POST)>0){
 
 print "<script>window.location='index.php?view=pacients';</script>";
 
-
 }
-
-
 ?>

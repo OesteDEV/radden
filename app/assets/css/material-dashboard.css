@@ -620,8 +620,6 @@ h2.title {
   transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 .main-panel > .content {
-  margin-top: 70px;
-  padding: 30px 15px;
   min-height: calc(100% - 123px);
 }
 .main-panel > .footer {
@@ -1542,10 +1540,6 @@ output {
 }
 
 .form-control {
-  height: 36px;
-  padding: 7px 0;
-  font-size: 14px;
-  line-height: 1.42857;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
@@ -1716,7 +1710,7 @@ output {
 .label.label-rose {
   background-color: #e91e63;
 }
-
+/*
 .form-control,
 .form-group .form-control {
   border: 0;
@@ -2180,7 +2174,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
   width: 20%;
   margin: 9px 0 0;
 }
-
+*/
 .alert {
   border: 0;
   border-radius: 0;
@@ -3489,14 +3483,14 @@ footer .btn {
 }
 
 .card {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin: 25px 0;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  border-radius: 3px;
-  color: rgba(0,0,0, 0.87);
-  background: #fff;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); */
+    border-radius: 3px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
 }
 .card .card-height-indicator {
   margin-top: 100%;
@@ -3532,20 +3526,15 @@ footer .btn {
   color: #999999;
 }
 .card .card-content {
-  padding: 15px 20px;
 }
 .card .card-content .category {
   margin-bottom: 0;
 }
 .card .card-header {
-  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-  margin: -20px 15px 0;
-  border-radius: 3px;
   padding: 15px;
-  background-color: #999999;
 }
 .card .card-header .title {
-  color: #FFFFFF;
+    color: #333;
 }
 .card .card-header .category {
   margin-bottom: 0;
@@ -3656,8 +3645,6 @@ footer .btn {
   box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
 }
 .card [data-background-color="blue"] {
-    background: linear-gradient(60deg, #65a561, #09821e);
-    box-shadow: 0 12px 20px -10px rgba(13, 14, 14, 0.86), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 .card [data-background-color="green"] {
   background: linear-gradient(60deg, #66bb6a, #43a047);
@@ -5031,10 +5018,19 @@ footer .btn {
 }
 
 .sidebar {
-    background-color: #4e1f6b;
+    background-color: #7c6288;
     color: white;
 }
 
 .main-panel {
     background-color: white;
+}
+
+.form-horizontal .form-group {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.form-horizontal{
+    padding-top:2em;
 }

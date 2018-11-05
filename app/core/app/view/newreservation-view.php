@@ -14,11 +14,11 @@ $payments = PaymentData::getAll();
       </div>      
       <form class="form-horizontal" role="form" method="post" action="./?action=addreservation">
         <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Asunto</label>
+          <label for="inputEmail1" class="col-lg-2 ">Asunto</label>
           <div class="col-lg-4">
             <input type="text" name="title" required class="form-control" id="inputEmail1">
           </div>
-          <label for="inputEmail1" class="col-lg-2 control-label">Paciente</label>
+          <label for="inputEmail1" class="col-lg-2 ">Paciente</label>
           <div class="col-lg-4">
             <select name="pacient_id" class="form-control" required>
               <option value="">-- SELECCIONE --</option>
@@ -29,7 +29,7 @@ $payments = PaymentData::getAll();
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Medico</label>
+          <label for="inputEmail1" class="col-lg-2 ">Medico</label>
           <div class="col-lg-4">
             <select name="medic_id" class="form-control" required>
             <option value="">-- SELECCIONE --</option>
@@ -38,7 +38,7 @@ $payments = PaymentData::getAll();
               <?php endforeach; ?>
             </select>
           </div>
-          <label for="inputEmail1" class="col-lg-2 control-label">Fecha/Hora</label>
+          <label for="inputEmail1" class="col-lg-2 ">Fecha/Hora</label>
           <div class="col-lg-2">
             <input type="date" name="date_at" required class="form-control" id="inputEmail1" placeholder="Fecha">
           </div>
@@ -46,28 +46,9 @@ $payments = PaymentData::getAll();
             <input type="time" name="time_at" required class="form-control" id="inputEmail1" placeholder="Hora">
           </div>
         </div>
+
         <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Nota</label>
-          <div class="col-lg-4">
-          <textarea class="form-control" name="note"></textarea>
-          </div>
-          <label for="inputEmail1" class="col-lg-2 control-label">Enfermedad</label>
-          <div class="col-lg-4">
-            <textarea class="form-control" name="sick"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Sintomas</label>
-          <div class="col-lg-4">
-          <textarea class="form-control" name="symtoms"></textarea>
-          </div>
-          <label for="inputEmail1" class="col-lg-2 control-label">Medicamentos</label>
-          <div class="col-lg-4">
-          <textarea class="form-control" name="medicaments"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Estado de la cita</label>
+          <label for="inputEmail1" class="col-lg-2 ">Estado del turno</label>
           <div class="col-lg-4">
             <select name="status_id" class="form-control" required>
               <?php foreach($statuses as $p):?>
@@ -75,7 +56,7 @@ $payments = PaymentData::getAll();
               <?php endforeach; ?>
             </select>
           </div>
-          <label for="inputEmail1" class="col-lg-2 control-label">Estado del pago</label>
+          <label for="inputEmail1" class="col-lg-2 ">Estado del pago</label>
           <div class="col-lg-4">
           <select name="payment_id" class="form-control" required>
             <?php foreach($payments as $p):?>
@@ -85,7 +66,7 @@ $payments = PaymentData::getAll();
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-lg-2 control-label">Costo</label>
+          <label for="inputEmail1" class="col-lg-2 ">Costo</label>
           <div class="col-lg-4">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-usd"></i></span>
