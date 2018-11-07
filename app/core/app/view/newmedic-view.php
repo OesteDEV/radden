@@ -10,6 +10,7 @@ $categories = CategoryData::getAll();
       </div>
       <div class="card-content table-responsive">
     		<form class="form-horizontal" method="post" id="addproduct" action="index.php?view=addmedic" role="form">
+          <!--
           <div class="form-group">
             <label for="inputEmail1" class="col-md-2">Area*</label>
             <div class="col-md-10">
@@ -21,6 +22,7 @@ $categories = CategoryData::getAll();
             </select>
             </div>
           </div>
+        -->
           <div class="form-group">
             <label for="inputEmail1" class="col-md-2">Nombre*</label>
             <div class="col-md-10">

@@ -2,10 +2,10 @@
 	<div class="col-md-12">
 		<div class="card">
 			<div class="card-header" data-background-color="blue">
-				<h4 class="title">Categorias</h4>
+				<h4 class="title">Tipos de estudios</h4>
 			</div>
 			<div class="card-content table-responsive">
-				<a href="index.php?view=newcategory" class="btn btn-default"><i class='fa fa-th-list'></i> Nueva Categoria</a>
+				<a href="index.php?view=newcategory" class="btn btn-default"><i class='fa fa-th-list'></i> Nuevo Estudio</a>
 				<?php
 				$users = CategoryData::getAll();
 				if(count($users)>0){
@@ -33,7 +33,7 @@
 				</table>
 				<?php
 				}else{
-					echo "<p class='alert alert-danger'>No hay Categorias</p>";
+					echo "<p class='alert alert-danger'>No hay estudios</p>";
 				}
 				?>
 

@@ -4,7 +4,7 @@
   <div class="col-md-8">
     <div class="card">
       <div class="card-header" data-background-color="blue">
-        <h4 class="title">Editar Categoria</h4>
+        <h4 class="title">Editar estudios</h4>
       </div>
       <div class="card-content table-responsive">
         <form class="form-horizontal" method="post" id="addproduct" action="index.php?view=updatecategory" role="form">
@@ -17,7 +17,7 @@
           <div class="form-group">
             <div class="col-md-12">
               <input type="hidden" name="user_id" value="<?php echo $user->id;?>">
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Actualizar Categoria</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Actualizar Estudio</button>
             </div>
           </div>
         </form>

@@ -82,14 +82,6 @@ CREATE TABLE `pacient` (
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `pacient`
---
-
-INSERT INTO `pacient` (`id`, `no`, `name`, `lastname`, `document`, `gender`, `day_of_birth`, `email`, `address`, `phone`, `coverage`, `image`, `sick`, `medicaments`, `alergy`, `is_favorite`, `is_active`, `created_at`) VALUES
-(5, NULL, 'Claudio', 'Coronel Milla', '34331855', 'h', '1989-04-02', 'clau_coronelmilla@hotmail.com', 'Sarmiento 1279', '1160300122', 'p', NULL, '111111', NULL, NULL, 1, 1, '2018-11-06 21:41:39'),
-(7, NULL, 'Xoana', 'Maidana', '33524252', 'm', '1988-02-05', 'o', 'Avellaneda 1438', '1140718507', 'x', NULL, '524165416', NULL, NULL, 1, 1, '2018-11-07 00:33:43');
-
 -- --------------------------------------------------------
 
 --

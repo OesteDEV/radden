@@ -61,7 +61,7 @@
             <li>
                 <a href="./?view=categories">
                     <i class="fa fa-th-list"></i>
-                    <p>Áreas</p>
+                    <p>Tipos de Estudios</p>
                 </a>
             </li>
             <li>

@@ -3,6 +3,7 @@ $pacients = PacientData::getAll();
 $medics = MedicData::getAll();
 $statuses = StatusData::getAll();
 $payments = PaymentData::getAll();
+$categories = CategoryData::getAll();
 ?>
 <div class="card">
   <div class="row">
@@ -30,6 +31,17 @@ $payments = PaymentData::getAll();
             </select>
           </div>
         </div>
+        <div class="form-group">
+          <label for="inputEmail1" class="col-md-2">Tipo de Estudio</label>
+          <div class="col-md-10">
+          <select name="category_id" class="form-control">
+          <option value="">-- SELECCIONE --</option>      
+          <?php foreach($categories as $cat):?>
+          <option value="<?php echo $cat->id; ?>"><?php echo $cat->name; ?></option>      
+          <?php endforeach;?>
+          </select>
+          </div>
+        </div>  
         <div class="form-group">
           <label for="inputEmail1" class="col-md-2 ">Medico</label>
           <div class="col-md-10">
