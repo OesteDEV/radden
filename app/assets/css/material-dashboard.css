@@ -405,13 +405,12 @@ h2.title {
   z-index: 1;
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
-.sidebar .sidebar-wrapper,
-.off-canvas-sidebar .sidebar-wrapper {
-  position: relative;
-  height: calc(100vh - 75px);
-  overflow: auto;
-  width: 260px;
-  z-index: 4;
+.sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper {
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: auto;
+    width: 220px;
+    z-index: 4;
 }
 .sidebar .logo-tim,
 .off-canvas-sidebar .logo-tim {
@@ -1412,8 +1411,7 @@ h2.title {
 }
 
 body {
-  background-color: #EEEEEE;
-  color: #3C4858;
+
 }
 body.inverse {
   background: #333333;
@@ -1445,9 +1443,7 @@ blockquote p {
 }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
+
 }
 
 .serif-font {
@@ -3490,14 +3486,15 @@ footer .btn {
     /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14); */
     border-radius: 3px;
     color: rgba(0,0,0, 0.87);
-    background: #fff;
 }
 .card .card-height-indicator {
   margin-top: 100%;
 }
 .card .title {
-  margin-top: 0;
-  margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: x-large;
 }
 .card .card-image {
   height: 60%;

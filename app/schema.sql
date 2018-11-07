@@ -1,6 +1,6 @@
 
-create database bookmedik;
-use bookmedik; 
+create database pacientes;
+use pacientes; 
 set sql_mode='';
 create table user (
 	id int not null auto_increment primary key,

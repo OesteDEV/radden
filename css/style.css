@@ -85,6 +85,8 @@ hr {
     font-size: 22px;
     color: #fff;
     font-weight: 700;
+    font-family: unset;
+    font-style: inherit;
 }
 #menu a.navbar-brand i.fa {
 	color: #88bb45;
@@ -93,17 +95,16 @@ hr {
     color: #ffffff;
     font-size: 14px;
     letter-spacing: 1px;
-    font-weight: 700;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
     color: #eaeaea;
 }
 .on {
-	background-color: #b7ea9b !important;
+	background-color: #82ba00 !important;
 	padding: 0 !important;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #71bd46 !important;
+	color: #000000 !important;
 	background-color: transparent;
 }
 .navbar-toggle {
@@ -177,7 +178,7 @@ header p {
     border-bottom: 1px solid #b8dea2;
     padding-bottom: 20px;
     display: inline-block;
-    color: #b0de96;
+    color: #000000;
 }
 #about-section p {
     margin-top: 20px;
@@ -382,16 +383,15 @@ label {
 	box-shadow: transparent;
 }
 #contact-section .btn {
-	background: transparent;
+	background: #71bd46;
 	border: 1px solid #71bd46;
 	border-radius: 4px;
 	padding: 10px 20px;
 	margin-top: 20px;
-	color: #71bd46;
-	font-size: 16px;
+	color: #fff;
 }
 #contact-section .btn:hover, #contact-section .btn:focus {
-	background: #71bd46;
+	background: #457d25;
 	color: #fff;
 }
 #contact-section .text-danger {
@@ -604,10 +604,9 @@ background: #428bca;
 }
 #hours-section {
     padding: 40px 0;
-    background-color: #9c9c9c;
-    color: whitesmoke;
+    background-color: #d8d8d8;
+    color: #292525;
 }
-
 #hours-section p{
-    color: whitesmoke;
+    color: #292525;
 }

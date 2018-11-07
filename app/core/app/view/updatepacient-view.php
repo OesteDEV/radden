@@ -4,15 +4,11 @@ if(count($_POST)>0){
 	$user = PacientData::getById($_POST["user_id"]);
 	$user->name = $_POST["name"];
 	$user->lastname = $_POST["lastname"];
-
+	$user->document = $_POST["document"];
 	$user->gender = $_POST["gender"];
 	$user->day_of_birth = $_POST["day_of_birth"];
-	
+	$user->coverage = $_POST["coverage"];
 	$user->sick = $_POST["sick"];
-	$user->medicaments = $_POST["medicaments"];
-	$user->alergy = $_POST["alergy"];
-
-
 	$user->address = $_POST["address"];
 	$user->email = $_POST["email"];
 	$user->phone = $_POST["phone"];
