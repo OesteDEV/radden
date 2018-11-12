@@ -1,7 +1,5 @@
 <div class="row">
-  <div class="col-md-2">    
-  </div>
-	<div class="col-md-8">
+	<div class="col-md-8 col-md-offset-2">
     <div class="card">
       <div class="card-header" data-background-color="blue">
         <h4 class="title">Nuevo Paciente</h4>
@@ -9,26 +7,26 @@
       <div class="card-content table-responsive">
       <form class="form-horizontal" method="post" id="addproduct" action="index.php?view=addpacient" role="form">
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Nombre*</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Apellido*</label>
+          <div class="col-md-8">
+            <input type="text" name="lastname"  class="form-control" id="lastname" placeholder="Apellido">
+          </div>
+        </div>        
+        <div class="form-group">
+          <label for="inputEmail1" class="col-md-4 ">Nombre*</label>
+          <div class="col-md-8">
             <input type="text" name="name" required class="form-control" id="name" placeholder="Nombre">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Apellido</label>
-          <div class="col-md-10">
-            <input type="text" name="lastname"  class="form-control" id="lastname" placeholder="Apellido">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">DNI</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">DNI</label>
+          <div class="col-md-8">
             <input name="document"  class="form-control" id="document" placeholder="Número de Documento">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Genero*</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Genero*</label>
+          <div class="col-md-8">
             <label class="checkbox-inline">
               <input type="radio" id="inlineCheckbox1" name="gender" required value="h"> Hombre
             </label>
@@ -38,32 +36,38 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Fecha de Nacimiento</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Fecha de Nacimiento</label>
+          <div class="col-md-8">
             <input type="date" name="day_of_birth" class="form-control"  id="address1" placeholder="Fecha de Nacimiento">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Direccion*</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Direccion*</label>
+          <div class="col-md-8">
             <input type="text" name="address" class="form-control"  id="address1" placeholder="Direccion">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Email*</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Localidad</label>
+          <div class="col-md-8">
+            <input type="text" name="city" class="form-control"  id="city" placeholder="Localidad">
+          </div>
+        </div>        
+        <div class="form-group">
+          <label for="inputEmail1" class="col-md-4 ">Email*</label>
+          <div class="col-md-8">
             <input type="text" name="email" class="form-control" id="email" placeholder="Email">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Telefono*</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Telefono*</label>
+          <div class="col-md-8">
             <input type="text" name="phone" class="form-control" id="phone1" placeholder="Telefono">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">Tipo de Cobertura</label>
-          <div class="col-md-10">
+          <label for="inputEmail1" class="col-md-4 ">Tipo de Cobertura</label>
+          <div class="col-md-8">
             <label class="checkbox-inline">
               <input type="radio" id="inlineCheckbox1" name="coverage" required value="p"> Particular
             </label>
@@ -73,20 +77,24 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-2 ">N° Carnet/Socio:</label>
-          <div class="col-md-10">
-            <textarea name="sick" class="form-control" id="sick" placeholder="Numero de Carnet/Socio"></textarea>
+          <label for="inputEmail1" class="col-md-4 ">Obra Social</label>
+          <div class="col-md-8">
+            <input type="text" name="obra" class="form-control" id="obra" placeholder="Obra Social">
           </div>
         </div>
         <div class="form-group">
-          <div class="col-md-12">
+          <label for="inputEmail1" class="col-md-4 ">N° Carnet/ Socio:</label>
+          <div class="col-md-8">
+            <input type="text" name="sick" class="form-control" id="sick" placeholder="Numero de Carnet/Socio">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-4 col-md-4 col-md-offset-4">
             <button type="submit" class="btn btn-primary btn-lg btn-block">Agregar Paciente</button>
           </div>
         </div>
       </form>
       </div>
     </div>
-  </div>
-  <div class="col-md-2">    
   </div>
 </div>

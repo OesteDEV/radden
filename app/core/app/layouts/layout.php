@@ -28,7 +28,7 @@
     <div class="sidebar" data-color="blue">
       <div class="logo">
         <a href="./" class="simple-text">
-          Gestion Odontológica
+          Radiologia Dental
         </a>
       </div>
        
@@ -55,7 +55,7 @@
             <li>
                 <a href="./?view=medics">
                     <i class="fa fa-support"></i>
-                    <p>Medicos</p>
+                    <p>Técnicos</p>
                 </a>
             </li>
             <li>
@@ -67,7 +67,7 @@
             <li>
                 <a href="./?view=reports">
                     <i class="fa fa-area-chart"></i>
-                    <p>Reporte de Citas</p>
+                    <p>Reportes</p>
                 </a>
             </li>
             <li>

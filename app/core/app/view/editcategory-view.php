@@ -1,7 +1,6 @@
 <?php $user = CategoryData::getById($_GET["id"]);?>
 <div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
+  <div class="col-md-8 col-md-offset-2">
     <div class="card">
       <div class="card-header" data-background-color="blue">
         <h4 class="title">Editar estudios</h4>
@@ -9,8 +8,8 @@
       <div class="card-content table-responsive">
         <form class="form-horizontal" method="post" id="addproduct" action="index.php?view=updatecategory" role="form">
           <div class="form-group">
-            <label for="inputEmail1" class="col-md-2">Nombre*</label>
-            <div class="col-md-10">
+            <label for="inputEmail1" class="col-md-4">Nombre*</label>
+            <div class="col-md-8">
               <input type="text" name="name" value="<?php echo $user->name;?>" class="form-control" id="name" placeholder="Nombre">
             </div>
           </div>
@@ -24,5 +23,4 @@
       </div>
     </div>
   </div>
-  <div class="col-md-2"></div>
 </div>

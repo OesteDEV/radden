@@ -11,7 +11,7 @@
 </div>
 -->
 </div>
-		<h1>Citas</h1>
+	<h4>Turnos Anteriores</h4>
 <br>
 		<?php
 

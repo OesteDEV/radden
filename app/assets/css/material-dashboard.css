@@ -408,7 +408,7 @@ h2.title {
 .sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper {
     position: relative;
     height: calc(100vh - 75px);
-    overflow: auto;
+    overflow: hidden;
     width: 220px;
     z-index: 4;
 }
@@ -450,12 +450,11 @@ h2.title {
 .off-canvas-sidebar .nav li.active > a i {
   color: #FFFFFF;
 }
-.sidebar .nav p,
-.off-canvas-sidebar .nav p {
-  margin: 0;
-  line-height: 30px;
-  font-size: 14px;
-  color: white;
+.sidebar .nav p, .off-canvas-sidebar .nav p {
+    margin: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: #a962de;
 }
 .sidebar .nav i,
 .off-canvas-sidebar .nav i {
@@ -465,7 +464,7 @@ h2.title {
   line-height: 30px;
   width: 30px;
   text-align: center;
-  color: white;
+  color: #a962de;
 }
 .sidebar .sidebar-background,
 .off-canvas-sidebar .sidebar-background {
@@ -520,7 +519,7 @@ h2.title {
     padding: 5px 0px;
     display: block;
     font-size: 18px;
-    color: #ffffff;
+    color: #a962de;
     text-align: center;
     font-weight: 400;
     line-height: 30px;
@@ -791,6 +790,7 @@ h2.title {
 .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:hover {
   background-color: #358a36;
   color: #FFFFFF;
+  font-size: 11px;
 }
 .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover,
 .navbar .navbar-nav > li > a.btn.btn-primary:focus,
@@ -989,6 +989,7 @@ h2.title {
 .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:hover {
   background-color: #ff9800;
   color: #FFFFFF;
+  font-size: 11px;
 }
 .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning:hover,
 .navbar .navbar-nav > li > a.btn.btn-warning:focus,
@@ -1277,11 +1278,10 @@ h2.title {
   width: 24px;
   font-size: 24px;
 }
-.btn.btn-lg, .btn-group-lg .btn,
-.navbar .navbar-nav > li > a.btn.btn-lg, .btn-group-lg
-.navbar .navbar-nav > li > a.btn {
-  font-size: 14px;
-  padding: 18px 36px;
+.btn.btn-lg, .btn-group-lg .btn, .navbar .navbar-nav > li > a.btn.btn-lg, .btn-group-lg
+ .navbar .navbar-nav > li > a.btn {
+    font-size: 11px;
+    padding: 18px 36px;
 }
 .btn.btn-sm, .btn-group-sm .btn,
 .navbar .navbar-nav > li > a.btn.btn-sm, .btn-group-sm
@@ -2238,10 +2238,10 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
   color: #ffffff;
 }
 .alert.alert-danger {
-  background-color: #f55a4e;
-  color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+    background-color: #cccccc;
+    color: #000000;
+    border-radius: 3px;
+    /* box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2); */
 }
 .alert.alert-danger a, .alert.alert-danger .alert-link {
   color: #ffffff;
@@ -3531,7 +3531,7 @@ footer .btn {
   padding: 15px;
 }
 .card .card-header .title {
-    color: #333;
+    color: #a962de;
 }
 .card .card-header .category {
   margin-bottom: 0;
@@ -4731,7 +4731,7 @@ footer .btn {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #282828;
+    background-color: #dedede;
     display: block;
     content: "";
     z-index: 1;
@@ -5015,8 +5015,7 @@ footer .btn {
 }
 
 .sidebar {
-    background-color: #7c6288;
-    color: white;
+    background-color: #dedede;
 }
 
 .main-panel {
@@ -5030,4 +5029,13 @@ footer .btn {
 
 .form-horizontal{
     padding-top:2em;
+}
+label{
+  font-size: 12px;
+  font-weight: 100;
+  padding-top: 20px;
+
+}
+.form-group{
+  margin-bottom: 5px;
 }

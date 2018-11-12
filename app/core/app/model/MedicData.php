@@ -10,11 +10,11 @@ class MedicData {
 		$this->created_at = "NOW()";
 	}
 
-	//public function getCategory(){ return CategoryData::getById($this->category_id); }
+	public function getCategory(){ return CategoryData::getById($this->category_id); }
 
 	public function add(){
-		$sql = "insert into ".self::$tablename." (name,lastname,address,phone,email,created_at) ";
-		$sql .= "value ($this->name\",\"$this->lastname\",\"$this->address\",\"$this->phone\",\"$this->email\",$this->created_at)";
+		$sql = "insert into ".self::$tablename." (name,lastname,address,phone,email,created_at, category_id) ";
+		$sql .= "value ($this->name\",\"$this->lastname\",\"$this->category_id\", \"$this->address\",\"$this->phone\",\"$this->email\",$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -35,7 +35,7 @@ class MedicData {
 
 
 	public function update(){
-		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",address=\"$this->address\",phone=\"$this->phone\",email=\"$this->email\" where id=$this->id";
+		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",category_id=\"$this->category_id\"address=\"$this->address\",phone=\"$this->phone\",email=\"$this->email\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

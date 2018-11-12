@@ -1,9 +1,12 @@
-<br><br><br><br><div class="row">
+<br>
+<br>
+<br>
+<br>
+<div class="row">
 	<div class="col-md-3">
-
 	</div>
 	<div class="col-md-6">
-	<h2>Cambiar Contraseña</h2>
+	 <h2>Cambiar Contraseña</h2>
 <br>	<form class="form-horizontal" id="changepasswd" method="post" action="index.php?view=changepasswd" role="form">
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-4 control-label">Contraseña Actual</label>

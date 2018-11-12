@@ -11,8 +11,8 @@ class PacientData {
 	}
 
 	public function add(){
-		$sql = "insert into ".self::$tablename." (name,lastname,document,gender,day_of_birth,address,phone, coverage,email,sick,created_at) ";
-		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->document\",\"$this->gender\",\"$this->day_of_birth\",\"$this->address\",\"$this->phone\",\"$this->email\",\"$this->coverage\",\"$this->sick\",$this->created_at)";
+		$sql = "insert into ".self::$tablename." (name,lastname,document,gender,day_of_birth,address,city, phone,email,coverage, obra,sick,created_at) ";
+		$sql .= "value (\"$this->name\",\"$this->lastname\",\"$this->document\",\"$this->gender\",\"$this->day_of_birth\",\"$this->address\",\"$this->city\",\"$this->phone\",\"$this->email\",\"$this->coverage\",\"$this->obra\",\"$this->sick\",$this->created_at)";
 		Executor::doit($sql);
 	}
 
@@ -33,7 +33,7 @@ class PacientData {
 
 
 	public function update(){
-		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",document=\"$this->document\",address=\"$this->address\",phone=\"$this->phone\",email=\"$this->email\", coverage=\"$this->coverage\",gender=\"$this->gender\",day_of_birth=\"$this->day_of_birth\",sick=\"$this->sick\" where id=$this->id";
+		$sql = "update ".self::$tablename." set name=\"$this->name\",lastname=\"$this->lastname\",document=\"$this->document\",address=\"$this->address\",city=\"$this->city\",phone=\"$this->phone\",email=\"$this->email\", coverage=\"$this->coverage\",obra=\"$this->obra\",gender=\"$this->gender\",day_of_birth=\"$this->day_of_birth\",sick=\"$this->sick\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

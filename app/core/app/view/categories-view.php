@@ -5,7 +5,7 @@
 				<h4 class="title">Tipos de estudios</h4>
 			</div>
 			<div class="card-content table-responsive">
-				<a href="index.php?view=newcategory" class="btn btn-default"><i class='fa fa-th-list'></i> Nuevo Estudio</a>
+				<a href="index.php?view=newcategory" class="btn btn-primary"><i class='fa fa-th-list'></i> Agregar Estudio</a>
 				<?php
 				$users = CategoryData::getAll();
 				if(count($users)>0){

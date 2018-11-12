@@ -23,17 +23,15 @@ foreach($events as $event){
 	});
 
 </script>
-
-
 <div class="row">
-<div class="col-md-12">
-<div class="card">
-  <div class="card-header" data-background-color="blue">
-      <h4 class="title">Calendario de Citas</h4>
-  </div>
-  <div class="card-content table-responsive">
-<div id="calendar"></div>
-</div>
-</div>
-</div>
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-header" data-background-color="blue">
+			    <h4 class="title">Calendario de Turnos</h4>
+			 </div>
+		  	<div class="card-content table-responsive">
+			<div id="calendar"></div>
+			</div>
+		</div>
+	</div>
 </div>
