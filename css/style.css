@@ -23,7 +23,7 @@ h3 {
 	font-weight: 600;
 }
 h4 {
-	color: #666;
+	color: #000;
 	font-size: 20px;
 }
 h5 {
@@ -33,9 +33,10 @@ h5 {
 	text-align: center;
 }
 p {
-	font-family: 'Open Sans', sans-serif;
-	color: #888;
-	line-height: 20px;
+    font-family: unset;
+    /* color: #000; */
+    line-height: 18px;
+    font-size: 13px;
 }
 a {
 	color: #71bd46;
@@ -115,7 +116,7 @@ hr {
     border-radius: 8px;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
-	background-color: #FFF;
+	background-color: #8e8282;
 }
 .section-title {
 	padding-bottom: 50px;
@@ -166,7 +167,7 @@ header p {
 /* About Section */
 #about-section {
     /* padding: 50px 50px; */
-    background-color: #ece9e9;
+    background-color: #fbfbfb;
     padding-top: 4em;
     padding-bottom: 4em;
 }
@@ -179,7 +180,6 @@ header p {
 #about-section p {
     margin-top: 20px;
     margin-bottom: 30px;
-    color: black;
     font-family: sans-serif;
     font-weight: 500;
 }
@@ -341,7 +341,7 @@ ol.type li a:hover {
 #contact-section {
     padding-top: 3em;
     padding-bottom: 5em;
-    background-color: azure;
+    background-color: #8d81b58f;
 }
 #contact-section form {
 	padding: 30px 0;
@@ -422,7 +422,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* Footer */
 #footer {
-    background-color: #8d81b5;
+    background-color: #8cc2a0;
     color: #d0cdcd;
     padding-top: 2em;
     padding-bottom: 1em;
@@ -478,9 +478,9 @@ label {
 }
 
 #footer i.fa {
-	color: #71bd46;
-	margin-right: 15px;
-	font-size: 15px;
+    color: #71bd46;
+    margin-right: 12px;
+    font-size: 15px;
 }
 
 #tecno-section {
@@ -601,12 +601,16 @@ background: #428bca;
 }
 #hours-section {
     padding: 40px 0;
-    background-color: #8cc2a0;
+    background-color: #eaeaea;
     color: #292525;
 }
 #hours-section p{
     color: #292525;
 }
 header {
+    background-color: white;
+}
+
+#menu{
     background-color: white;
 }

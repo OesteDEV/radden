@@ -453,18 +453,17 @@ h2.title {
 .sidebar .nav p, .off-canvas-sidebar .nav p {
     margin: 0;
     line-height: 30px;
-    font-size: 14px;
-    color: #a962de;
+    font-size: 12px;
+    color: #ffffff;
 }
-.sidebar .nav i,
-.off-canvas-sidebar .nav i {
-  font-size: 24px;
-  float: left;
-  margin-right: 15px;
-  line-height: 30px;
-  width: 30px;
-  text-align: center;
-  color: #a962de;
+.sidebar .nav i, .off-canvas-sidebar .nav i {
+    font-size: 17px;
+    float: left;
+    margin-right: 15px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #ffffff;
 }
 .sidebar .sidebar-background,
 .off-canvas-sidebar .sidebar-background {
@@ -519,7 +518,7 @@ h2.title {
     padding: 5px 0px;
     display: block;
     font-size: 18px;
-    color: #a962de;
+    color: #ffffff;
     text-align: center;
     font-weight: 400;
     line-height: 30px;
@@ -5015,7 +5014,7 @@ footer .btn {
 }
 
 .sidebar {
-    background-color: #dedede;
+    background-color: #8b82b0;
 }
 
 .main-panel {

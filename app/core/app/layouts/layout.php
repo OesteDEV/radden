@@ -28,11 +28,11 @@
     <div class="sidebar" data-color="blue">
       <div class="logo">
         <a href="./" class="simple-text">
-          Radiologia Dental
         </a>
       </div>
        
       <div class="sidebar-wrapper">
+        <img src="../img/header-bg.jpg" class="img-responsive">
         <ul class="nav">
             <li class="">
                 <a href="./">
