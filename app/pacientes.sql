@@ -48,7 +48,9 @@ CREATE TABLE `medic` (
   `day_of_birth` date DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
+  `matricula` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` datetime DEFAULT NULL,
@@ -63,7 +65,6 @@ CREATE TABLE `medic` (
 
 CREATE TABLE `pacient` (
   `id` int(11) NOT NULL,
-  `no` varchar(50) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `lastname` varchar(50) DEFAULT NULL,
   `document` varchar(255) NOT NULL,
@@ -71,12 +72,12 @@ CREATE TABLE `pacient` (
   `day_of_birth` date DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
   `coverage` varchar(1) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `sick` varchar(500) DEFAULT NULL,
-  `medicaments` varchar(500) DEFAULT NULL,
-  `alergy` varchar(500) DEFAULT NULL,
+  `sick` varchar(255) DEFAULT NULL,
+  `obra` varchar(255) DEFAULT NULL,
   `is_favorite` tinyint(1) NOT NULL DEFAULT '1',
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` datetime DEFAULT NULL

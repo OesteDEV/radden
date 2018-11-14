@@ -73,7 +73,7 @@
                 <input type="radio" id="inlineCheckbox1" name="coverage" required <?php if($user->coverage=="p"){ echo "checked"; }?> value="p"> Particular
               </label>
               <label class="checkbox-inline">
-                <input type="radio" id="inlineCheckbox2" name="coverage" required <?php if($user->coverage=="o"){ echo "checked"; }?>value="o"> Obra Social
+                <input type="radio" id="inlineCheckbox2" name="coverage" required <?php if($user->coverage=="o"){ echo "checked"; }?> value="o"> Obra Social
               </label>
             </div>
           </div>  

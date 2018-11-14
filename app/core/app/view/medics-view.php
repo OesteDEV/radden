@@ -33,18 +33,18 @@
 				foreach($users as $user){
 					?>
 					<tr>
-					<td><?php echo $user->name." ".$user->lastname; ?></td>
-					<td><?php echo $user->address; ?></td>
-					<td><?php echo $user->email; ?></td>
-					<td><?php echo $user->phone; ?></td>
-					<td style="width:280px;">
-					<a href="index.php?view=editmedic&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Ver</a>
-					<a href="index.php?view=delmedic&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
-					<a href="index.php?view=medichistory&id=<?php echo $user->id;?>" class="btn btn-default btn-xs">Historial</a>
-					</td>
+						<td><?php echo $user->name." ".$user->lastname; ?></td>
+						<td><?php echo $user->address; ?></td>
+						<td><?php echo $user->email; ?></td>
+						<td><?php echo $user->phone; ?></td>
+						<td style="width:280px;">
+						<a href="index.php?view=editmedic&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Ver</a>
+						<a href="index.php?view=delmedic&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
+						<a href="index.php?view=medichistory&id=<?php echo $user->id;?>" class="btn btn-default btn-xs">Historial</a>
+						</td>
 					</tr>
 					<?php
-				?>
+					?>
 				</table>
 				<?php
 					}
