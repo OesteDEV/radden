@@ -25,7 +25,7 @@
 				foreach($users as $user){
 					?>
 					<tr>
-						<td><?php echo $user->name." ".$user->lastname; ?></td>
+						<td><?php echo $user->lastname." ".$user->name; ?></td>
 						<td><?php echo $user->address; ?></td>
 						<td><?php echo $user->email; ?></td>
 						<td><?php echo $user->phone; ?></td>

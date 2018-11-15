@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <title>Gestion Odontológica</title>
+  <title>Radiología Dental</title>
 
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/material-dashboard.css" rel="stylesheet"/>
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -62,6 +63,12 @@
                 <a href="./?view=categories">
                     <i class="fa fa-th-list"></i>
                     <p>Tipos de Estudios</p>
+                </a>
+            </li>
+            <li>
+                <a href="./?view=coverages">
+                    <i class="fa fa-th-list"></i>
+                    <p>Coberturas</p>
                 </a>
             </li>
             <li>
