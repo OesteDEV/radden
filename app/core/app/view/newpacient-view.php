@@ -90,7 +90,7 @@
         </div>
         <div class="form-group">
           <div class="col-md-offset-4 col-md-4 col-md-offset-4">
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Agregar Paciente</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><i class='fa fa-plus-circle'></i> Agregar Paciente</button>
           </div>
         </div>
       </form>

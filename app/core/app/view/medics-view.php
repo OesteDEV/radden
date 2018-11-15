@@ -6,15 +6,7 @@
 		  </div>
   		<div class="card-content table-responsive">
 			<div class="btn-group">
-				<a href="index.php?view=newmedic" class="btn btn-primary"><i class='fa fa-support'></i> Agregar Técnico</a>
-				<!--<div class="btn-group pull-right">
-				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				    <i class="fa fa-download"></i> Descargar <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" role="menu">
-				    <li><a href="report/medicss-word.php">Word 2007 (.docx)</a></li>
-				  </ul>
-				</div> -->
+				<a href="index.php?view=newmedic" class="btn btn-primary"><i class='fa fa-plus-circle'></i> Agregar Técnico</a>
 			</div>
 			<?php
 			$users = MedicData::getAll();
@@ -37,21 +29,21 @@
 						<td><?php echo $user->address; ?></td>
 						<td><?php echo $user->email; ?></td>
 						<td><?php echo $user->phone; ?></td>
-						<td style="width:280px;">
-						<a href="index.php?view=editmedic&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Ver</a>
-						<a href="index.php?view=delmedic&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
-						<a href="index.php?view=medichistory&id=<?php echo $user->id;?>" class="btn btn-default btn-xs">Historial</a>
+						<td style="width:150px;">
+						<a href="index.php?view=editmedic&id=<?php echo $user->id;?>" class="btn btn-dark btn-xs"><i class='fa fa-edit'></i></a>
+						<a href="index.php?view=medichistory&id=<?php echo $user->id;?>" class="btn btn-success btn-xs"><i class='fa fa-bars'></i></a>
+						<a href="index.php?view=delmedic&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs"><i class='fa fa-trash'></i></a>
 						</td>
 					</tr>
 					<?php
 					?>
-				</table>
 				<?php
 					}
 				}else{
 					echo "<p class='alert alert-danger'>No hay Técnicos cargados</p>";
 				}
 				?>
+				</table>
 			</div>
 		</div>
 	</div>

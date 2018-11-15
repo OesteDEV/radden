@@ -1,15 +1,12 @@
 <div class="row">
 	<div class="col-md-12">
-
-<div class="card">
-  <div class="card-header" data-background-color="blue">
-      <h4 class="title">Usuarios</h4>
-  </div>
-  <div class="card-content table-responsive">
-
-
-	<a href="index.php?view=newuser" class="btn btn-default"><i class='fa fa-user'></i> Nuevo Usuario</a>
-<br>
+		<div class="card">
+			<div class="card-header" data-background-color="blue">
+				<h4 class="title">Usuarios</h4>
+			</div>
+			<div class="card-content table-responsive">
+			<a href="index.php?view=newuser" class="btn btn-primary"><i class='fa fa-user'></i> Nuevo Usuario</a>
+		<br>
 		<?php
 		/*
 		$u = new UserData();
@@ -58,7 +55,7 @@
 						<i class="fa fa-check"></i>
 					<?php endif; ?>
 				</td>
-				<td style="width:30px;"><a href="index.php?view=edituser&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a></td>
+				<td style="width:30px;"><a href="index.php?view=edituser&id=<?php echo $user->id;?>" class="btn btn-dark btn-xs"><i class="fa fa-edit"></i></a></td>
 				</tr>
 				<?php
 

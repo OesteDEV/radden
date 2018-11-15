@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
+            <div class="col-md-offset-4 col-md-4 col-md-offset-4">
             <input type="hidden" name="user_id" value="<?php echo $user->id;?>">
               <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
             </div>

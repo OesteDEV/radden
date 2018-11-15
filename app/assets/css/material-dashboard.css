@@ -1,3 +1,5 @@
+/* #8b82b0   violeta */
+/* #8cc2a0     verde */
 
 .noUi-target,
 .noUi-target * {
@@ -603,7 +605,7 @@ h2.title {
   z-index: 2;
   float: right;
   overflow: auto;
-  width: calc(100% - 260px);
+  width: calc(100% - 230px);
   min-height: 100%;
   -webkit-transform: translate3d(0px, 0, 0);
   -moz-transform: translate3d(0px, 0, 0);
@@ -770,26 +772,15 @@ h2.title {
   background-color: transparent;
   color: #999999;
 }
-.btn.btn-primary,
-.navbar .navbar-nav > li > a.btn.btn-primary {
-  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
-}
-.btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .open > .btn.btn-primary.dropdown-toggle, .open > .btn.btn-primary.dropdown-toggle:focus, .open > .btn.btn-primary.dropdown-toggle:hover,
-.navbar .navbar-nav > li > a.btn.btn-primary,
-.navbar .navbar-nav > li > a.btn.btn-primary:hover,
-.navbar .navbar-nav > li > a.btn.btn-primary:focus,
-.navbar .navbar-nav > li > a.btn.btn-primary:active,
-.navbar .navbar-nav > li > a.btn.btn-primary.active,
-.navbar .navbar-nav > li > a.btn.btn-primary:active:focus,
-.navbar .navbar-nav > li > a.btn.btn-primary:active:hover,
-.navbar .navbar-nav > li > a.btn.btn-primary.active:focus,
-.navbar .navbar-nav > li > a.btn.btn-primary.active:hover, .open >
-.navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle, .open >
-.navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:focus, .open >
-.navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:hover {
-  background-color: #358a36;
-  color: #FFFFFF;
-  font-size: 11px;
+.btn.btn-primary, .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary.active:focus, .btn.btn-primary.active:hover, .open > .btn.btn-primary.dropdown-toggle, .open > .btn.btn-primary.dropdown-toggle:focus, .open > .btn.btn-primary.dropdown-toggle:hover, .navbar .navbar-nav > li > a.btn.btn-primary, .navbar .navbar-nav > li > a.btn.btn-primary:hover, .navbar .navbar-nav > li > a.btn.btn-primary:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active, .navbar .navbar-nav > li > a.btn.btn-primary.active, .navbar .navbar-nav > li > a.btn.btn-primary:active:focus, .navbar .navbar-nav > li > a.btn.btn-primary:active:hover, .navbar .navbar-nav > li > a.btn.btn-primary.active:focus, .navbar .navbar-nav > li > a.btn.btn-primary.active:hover, .open >
+ .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle, .open >
+ .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:focus, .open >
+ .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:hover {
+    background-color: #4caf50;
+    color: #f5f5f5;
+    font-size: 12px;
+    /* font-weight: bold; */
+    text-transform: unset;
 }
 .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:hover,
 .navbar .navbar-nav > li > a.btn.btn-primary:focus,
@@ -973,22 +964,14 @@ h2.title {
 .navbar .navbar-nav > li > a.btn.btn-warning {
   box-shadow: 0 2px 2px 0 rgba(255, 152, 0, 0.14), 0 3px 1px -2px rgba(255, 152, 0, 0.2), 0 1px 5px 0 rgba(255, 152, 0, 0.12);
 }
-.btn.btn-warning, .btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning.active, .btn.btn-warning:active:focus, .btn.btn-warning:active:hover, .btn.btn-warning.active:focus, .btn.btn-warning.active:hover, .open > .btn.btn-warning.dropdown-toggle, .open > .btn.btn-warning.dropdown-toggle:focus, .open > .btn.btn-warning.dropdown-toggle:hover,
-.navbar .navbar-nav > li > a.btn.btn-warning,
-.navbar .navbar-nav > li > a.btn.btn-warning:hover,
-.navbar .navbar-nav > li > a.btn.btn-warning:focus,
-.navbar .navbar-nav > li > a.btn.btn-warning:active,
-.navbar .navbar-nav > li > a.btn.btn-warning.active,
-.navbar .navbar-nav > li > a.btn.btn-warning:active:focus,
-.navbar .navbar-nav > li > a.btn.btn-warning:active:hover,
-.navbar .navbar-nav > li > a.btn.btn-warning.active:focus,
-.navbar .navbar-nav > li > a.btn.btn-warning.active:hover, .open >
-.navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle, .open >
-.navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:focus, .open >
-.navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:hover {
-  background-color: #ff9800;
-  color: #FFFFFF;
-  font-size: 11px;
+.btn.btn-warning, .btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning.active, .btn.btn-warning:active:focus, .btn.btn-warning:active:hover, .btn.btn-warning.active:focus, .btn.btn-warning.active:hover, .open > .btn.btn-warning.dropdown-toggle, .open > .btn.btn-warning.dropdown-toggle:focus, .open > .btn.btn-warning.dropdown-toggle:hover, .navbar .navbar-nav > li > a.btn.btn-warning, .navbar .navbar-nav > li > a.btn.btn-warning:hover, .navbar .navbar-nav > li > a.btn.btn-warning:focus, .navbar .navbar-nav > li > a.btn.btn-warning:active, .navbar .navbar-nav > li > a.btn.btn-warning.active, .navbar .navbar-nav > li > a.btn.btn-warning:active:focus, .navbar .navbar-nav > li > a.btn.btn-warning:active:hover, .navbar .navbar-nav > li > a.btn.btn-warning.active:focus, .navbar .navbar-nav > li > a.btn.btn-warning.active:hover, .open >
+ .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle, .open >
+ .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:focus, .open >
+ .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:hover {
+    background-color: #777;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: unset;
 }
 .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning:hover,
 .navbar .navbar-nav > li > a.btn.btn-warning:focus,
@@ -1279,7 +1262,7 @@ h2.title {
 }
 .btn.btn-lg, .btn-group-lg .btn, .navbar .navbar-nav > li > a.btn.btn-lg, .btn-group-lg
  .navbar .navbar-nav > li > a.btn {
-    font-size: 11px;
+    font-size: 12px;
     padding: 18px 36px;
 }
 .btn.btn-sm, .btn-group-sm .btn,
@@ -1288,11 +1271,10 @@ h2.title {
   padding: 5px 20px;
   font-size: 11px;
 }
-.btn.btn-xs, .btn-group-xs .btn,
-.navbar .navbar-nav > li > a.btn.btn-xs, .btn-group-xs
-.navbar .navbar-nav > li > a.btn {
-  padding: 4px 15px;
-  font-size: 10px;
+.btn.btn-xs, .btn-group-xs .btn, .navbar .navbar-nav > li > a.btn.btn-xs, .btn-group-xs
+ .navbar .navbar-nav > li > a.btn {
+    padding: 4px 8px;
+    /* font-size: 7px; */
 }
 .btn.btn-just-icon,
 .navbar .navbar-nav > li > a.btn.btn-just-icon {
@@ -2310,7 +2292,7 @@ select.form-control[multiple], .form-group.is-focused select.form-control[multip
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 12px 8px;
+  padding: 4px 10px;
   vertical-align: middle;
 }
 .table > thead > tr > th {
@@ -3494,6 +3476,8 @@ footer .btn {
     margin-bottom: 25px;
     text-align: center;
     font-size: x-large;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .card .card-image {
   height: 60%;
@@ -3530,7 +3514,7 @@ footer .btn {
   padding: 15px;
 }
 .card .card-header .title {
-    color: #a962de;
+    color: #8b82b0 ;
 }
 .card .card-header .category {
   margin-bottom: 0;
@@ -5037,4 +5021,9 @@ label{
 }
 .form-group{
   margin-bottom: 5px;
+}
+
+td {
+    font-size: 13px;
+    font-weight: bold;
 }

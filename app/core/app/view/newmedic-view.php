@@ -64,7 +64,7 @@ $categories = CategoryData::getAll();
           </div>          
           <div class="form-group">
             <div class="col-md-offset-4 col-md-4 col-md-offset-4">
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Agregar Técnico</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block"><i class='fa fa-plus-circle'></i> Agregar Técnico</button>
             </div>
           </div>
         </form>

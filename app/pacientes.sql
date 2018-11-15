@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2018 a las 04:35:16
+-- Tiempo de generación: 15-11-2018 a las 05:25:41
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -33,6 +33,17 @@ CREATE TABLE `category` (
   `name` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(2, 'Placa PanorÃ¡mica ATM'),
+(3, 'Placa Seriada'),
+(4, 'Placa PanorÃ¡mica'),
+(5, 'PanorÃ¡mica Segmentada'),
+(6, 'Senos Maxilares');
+
 -- --------------------------------------------------------
 
 --
@@ -56,6 +67,14 @@ CREATE TABLE `medic` (
   `created_at` datetime DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `medic`
+--
+
+INSERT INTO `medic` (`id`, `no`, `name`, `lastname`, `gender`, `day_of_birth`, `email`, `address`, `city`, `phone`, `matricula`, `image`, `is_active`, `created_at`, `category_id`) VALUES
+(1, NULL, 'Eliana', 'Pellejero', NULL, NULL, 'elu@elu.com', 'Marcos Paz', 'Arenales 540', '146546546', '12146', NULL, 1, '2018-11-14 20:18:04', NULL),
+(2, NULL, 'Trinidad', 'Amaya', NULL, NULL, 'trinidadamaya@hotmail.com', 'Marcos Paz', 'San juan 2028', '112416412', '11124', NULL, 1, '2018-11-14 20:18:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -82,6 +101,13 @@ CREATE TABLE `pacient` (
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pacient`
+--
+
+INSERT INTO `pacient` (`id`, `name`, `lastname`, `document`, `gender`, `day_of_birth`, `email`, `address`, `city`, `phone`, `coverage`, `image`, `sick`, `obra`, `is_favorite`, `is_active`, `created_at`) VALUES
+(8, 'Claudio Omar', 'Coronel Milla', '34331855', 'h', '1989-04-02', 'clau_coronelmilla@hotmail.com', 'Sarmiento 1279', 'Marcos Paz', '1160300122', 'o', NULL, '1274-4165', 'UTEDYC', 1, 1, '2018-11-14 19:54:48');
 
 -- --------------------------------------------------------
 
@@ -128,6 +154,13 @@ CREATE TABLE `reservation` (
   `payment_id` int(11) NOT NULL DEFAULT '1',
   `status_id` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `reservation`
+--
+
+INSERT INTO `reservation` (`id`, `title`, `note`, `message`, `date_at`, `time_at`, `created_at`, `pacient_id`, `symtoms`, `sick`, `medicaments`, `user_id`, `medic_id`, `price`, `is_web`, `payment_id`, `status_id`) VALUES
+(1, 'Consulta Radiografica', '', NULL, '2015-11-15', '15:20', '2018-11-14 21:07:58', 8, '', '', '', 1, 1, 400, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -235,19 +268,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `medic`
 --
 ALTER TABLE `medic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `pacient`
 --
 ALTER TABLE `pacient`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `payment`
@@ -259,7 +292,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT de la tabla `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `status`
