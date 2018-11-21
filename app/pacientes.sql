@@ -387,6 +387,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `time_at` varchar(50) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `pacient_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
   `symtoms` text,
   `sick` text,
   `medicaments` text,
@@ -401,6 +402,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   KEY `status_id` (`status_id`),
   KEY `user_id` (`user_id`),
   KEY `pacient_id` (`pacient_id`),
+  KEY `category_id` (`category_id`),
   KEY `medic_id` (`medic_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 

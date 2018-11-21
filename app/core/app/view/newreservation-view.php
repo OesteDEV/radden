@@ -34,8 +34,8 @@ $categories = CategoryData::getAll();
           <div class="col-md-8">
           <select name="category_id" class="form-control">
           <option value="">Seleccionar</option>      
-          <?php foreach($categories as $cat):?>
-          <option value="<?php echo $cat->id; ?>"><?php echo $cat->name; ?></option>      
+          <?php foreach($categories as $p):?>
+          <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>      
           <?php endforeach;?>
           </select>
           </div>
@@ -53,11 +53,13 @@ $categories = CategoryData::getAll();
         </div>
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4 ">Fecha</label>
-          <div class="col-md-2">
+          <div class="col-md-8">
             <input type="date" name="date_at" required class="form-control" id="inputEmail1" placeholder="Fecha">
           </div>
-          <label for="inputEmail1" class="col-md-2 ">Hora</label>
-          <div class="col-md-2">
+        </div>
+        <div class="form-group">          
+          <label for="inputEmail1" class="col-md-4 ">Hora</label>
+          <div class="col-md-8">
             <input type="time" name="time_at" required class="form-control" id="inputEmail1" placeholder="Hora">
           </div>
         </div>
