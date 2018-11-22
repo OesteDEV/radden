@@ -20,7 +20,8 @@
 				<?php
 				$pacients = PacientData::getAll();
 				$medics = MedicData::getAll();
-        ?>
+				$categories = CategoryData::getAll();
+				?>
 			  <div class="form-group">
 			    <div class="col-md-3">
 						<div class="input-group">
@@ -107,8 +108,8 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 			?>
 			<table class="table table-bordered table-hover">
 			<thead>
-			<th>Asunto</th>
 			<th>Paciente</th>
+			<th>Tipo de Estudio</th>
 			<th>Medico</th>
 			<th>Fecha</th>
 			<th></th>
@@ -117,15 +118,16 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 			foreach($users as $user){
 				$pacient  = $user->getPacient();
 				$medic = $user->getMedic();
+				$category = $user->getCategory();
 				?>
 				<tr>
-				<td><?php echo $user->title; ?></td>
-				<td><?php echo $pacient->name." ".$pacient->lastname; ?></td>
-				<td><?php echo $medic->name." ".$medic->lastname; ?></td>
+				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
+				<td><?php echo $category->name; ?></td>
+				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
 				<td><?php echo $user->date_at." ".$user->time_at; ?></td>
-				<td style="width:180px;">
-				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a>
-				<a href="index.php?action=delreservation&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
+				<td style="width:100px;">
+				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-dark btn-xs"><i class='fa fa-edit'></i></a>
+				<a href="index.php?action=delreservation&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs"><i class='fa fa-trash'></i></a>
 				</td>
 				</tr>
 				<?php

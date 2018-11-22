@@ -381,24 +381,21 @@ DROP TABLE IF EXISTS `reservation`;
 CREATE TABLE IF NOT EXISTS `reservation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) DEFAULT NULL,
-  `note` text,
-  `message` text,
   `date_at` varchar(50) DEFAULT NULL,
   `time_at` varchar(50) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `pacient_id` int(11) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
-  `symtoms` text,
-  `sick` text,
-  `medicaments` text,
   `user_id` int(11) DEFAULT NULL,
   `medic_id` int(11) DEFAULT NULL,
   `price` double DEFAULT NULL,
   `is_web` tinyint(1) NOT NULL DEFAULT '0',
   `payment_id` int(11) NOT NULL DEFAULT '1',
+  `payment_type_id` int(11) NOT NULL DEFAULT '1',
   `status_id` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `payment_id` (`payment_id`),
+  KEY `payment_type_id` (`payment_type_id`),
   KEY `status_id` (`status_id`),
   KEY `user_id` (`user_id`),
   KEY `pacient_id` (`pacient_id`),
@@ -406,12 +403,6 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   KEY `medic_id` (`medic_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `reservation`
---
-
-INSERT INTO `reservation` (`id`, `title`, `note`, `message`, `date_at`, `time_at`, `created_at`, `pacient_id`, `symtoms`, `sick`, `medicaments`, `user_id`, `medic_id`, `price`, `is_web`, `payment_id`, `status_id`) VALUES
-(1, 'Consulta Radiografica', '', NULL, '2015-11-15', '15:20', '2018-11-14 21:07:58', 8, '', '', '', 1, 1, 400, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -438,6 +429,29 @@ INSERT INTO `status` (`id`, `name`) VALUES
 
 -- --------------------------------------------------------
 
+
+--
+-- Estructura de tabla para la tabla `payment_type`
+--
+
+DROP TABLE IF EXISTS `payment_type`;
+CREATE TABLE IF NOT EXISTS `payment_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `status`
+--
+
+INSERT INTO `payment_type` (`id`, `name`) VALUES
+(1, 'Efectivo'),
+(2, 'Tarjeta de Credito'),
+(3, 'Tarjeta de Debito'),
+(4, 'Reintegro Obra Social');
+
+-- --------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `user`
 --

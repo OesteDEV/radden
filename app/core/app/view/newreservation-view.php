@@ -3,6 +3,7 @@ $pacients = PacientData::getAll();
 $medics = MedicData::getAll();
 $statuses = StatusData::getAll();
 $payments = PaymentData::getAll();
+$payments_types = Payment_typeData::getAll();
 $categories = CategoryData::getAll();
 ?>
 <div class="card">
@@ -24,7 +25,7 @@ $categories = CategoryData::getAll();
             <select name="pacient_id" class="form-control" required>
               <option value="">Seleccionar</option>
               <?php foreach($pacients as $p):?>
-                <option value="<?php echo $p->id; ?>"><?php echo $p->id." - ".$p->name." ".$p->lastname; ?></option>
+                <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
               <?php endforeach; ?>
             </select>
           </div>
@@ -46,7 +47,7 @@ $categories = CategoryData::getAll();
             <select name="medic_id" class="form-control" required>
             <option value="">Seleccionar</option>
               <?php foreach($medics as $p):?>
-                <option value="<?php echo $p->id; ?>"><?php echo $p->id." - ".$p->name." ".$p->lastname; ?></option>
+                <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
               <?php endforeach; ?>
             </select>
           </div>
@@ -90,6 +91,16 @@ $categories = CategoryData::getAll();
               <span class="input-group-addon"><i class="fa fa-usd"></i></span>
               <input type="text" class="form-control" name="price">
             </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail1" class="col-md-4 ">Forma de pago</label>
+          <div class="col-md-8">
+          <select name="payment_type_id" class="form-control" required>
+            <?php foreach($payments_types as $p):?>
+              <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
+            <?php endforeach; ?>
+          </select>
           </div>
         </div>
         <div class="form-group">
