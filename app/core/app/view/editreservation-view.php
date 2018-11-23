@@ -19,7 +19,7 @@ $categories = CategoryData::getAll();
 <div class="card">
   <div class="row">
     <div class="card-header" data-background-color="blue">
-      <h4 class="title">Modificar Turno</h4>
+      <h4 class="title">Detalle del Turno</h4>
     </div>
     <div  id="printableArea" class="col-md-8 col-md-offset-2">
       <div class="card">
@@ -48,7 +48,7 @@ $categories = CategoryData::getAll();
               <select name="category_id" class="form-control">
               <option value="">Seleccionar</option>      
               <?php foreach($categories as $p):?>
-              <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>      
+              <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->category_id){ echo "selected"; }?>><?php echo $p->name; ?></option>      
               <?php endforeach;?>
               </select>
               </div>
@@ -107,7 +107,7 @@ $categories = CategoryData::getAll();
               <div class="col-md-8">
               <select name="payment_type_id" class="form-control" required>
                 <?php foreach($payments_types as $p):?>
-                  <option value="<?php echo $p->payment_type_id;?>"><?php echo $p->name; ?></option>
+                  <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->payment_type_id){ echo "selected"; }?>><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
               </select>
               </div>
@@ -116,13 +116,13 @@ $categories = CategoryData::getAll();
               <div class="row">
                 <div class="col-md-4">
                   <input type="hidden" name="id" value="<?php echo $reservation->id; ?>">
-                  <button type="submit" class="btn btn-primary btn-lg btn-block">Actualizar Cita</button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-retweet"></i> Actualizar Cita </button>
                 </div>
                 <div class="col-md-4">
-                  <input type="button" class="btn btn-primary btn-lg btn-block" onclick="printDiv('printableArea')" value="Imprimir Constancia"/>
+                  <a type="button" class="btn btn-primary btn-lg btn-block" onclick="printDiv('printableArea')" value="Imprimir Constancia"><i class="fa fa-print"></i> Imprimir Constancia</a>
                 </div>
                 <div class="col-md-4">
-                  <a href="index.php?action=delreservation&id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block">Eliminar Turno</a>
+                  <a href="index.php?action=delreservation&id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block"><i class="fa fa-trash"></i> Eliminar Turno</a>
                 </div>
               </div>
             </div>

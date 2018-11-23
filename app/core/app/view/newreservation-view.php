@@ -22,8 +22,8 @@ $categories = CategoryData::getAll();
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4 ">Paciente</label>
           <div class="col-md-8">
-            <select name="pacient_id" class="form-control" required>
-              <option value="">Seleccionar</option>
+            <select name="pacient_id" class="form-control selectpicker" data-live-search="true" required>
+              <option>Seleccionar</option>
               <?php foreach($pacients as $p):?>
                 <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
               <?php endforeach; ?>
@@ -33,8 +33,8 @@ $categories = CategoryData::getAll();
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4">Tipo de Estudio</label>
           <div class="col-md-8">
-          <select name="category_id" class="form-control">
-          <option value="">Seleccionar</option>      
+          <select name="category_id" class="form-control selectpicker" data-live-search="true">
+          <option>Seleccionar</option>      
           <?php foreach($categories as $p):?>
           <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>      
           <?php endforeach;?>

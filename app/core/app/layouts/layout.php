@@ -3,24 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
   <title>Radiología Dental</title>
-
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/material-dashboard.css" rel="stylesheet"/>
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/material-dashboard.css" rel="stylesheet"/>
+  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
   <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+  <?php if(isset($_GET["view"]) && $_GET["view"]=="home"):?>
+  <link href='assets/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+  <link href='assets/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+  <script src='assets/fullcalendar/moment.min.js'></script>
+  <script src='assets/fullcalendar/fullcalendar.min.js'></script>
+  <?php endif; ?>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
 
-<?php if(isset($_GET["view"]) && $_GET["view"]=="home"):?>
-<link href='assets/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
-<link href='assets/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
-<script src='assets/fullcalendar/moment.min.js'></script>
-<script src='assets/fullcalendar/fullcalendar.min.js'></script>
-<?php endif; ?>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
+
+
+  
 </head>
 
 <body>
@@ -83,6 +90,12 @@
                     <p>Usuarios</p>
                 </a>
             </li>
+             <li>
+                <a href="logout.php">
+                    <i class="fa fa-power-off"></i>
+                    <p>Salir</p>
+                </a>
+            </li>            
         </ul>
       </div>
     </div>
@@ -105,7 +118,6 @@
                   <i class="fa fa-user"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="logout.php">Salir</a></li>
                 </ul>
               </li>
             </ul>

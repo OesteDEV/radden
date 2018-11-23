@@ -15,6 +15,7 @@
 				</div>
 			<br>
 			<br>
+			<!--
 			<form class="form-horizontal" role="form">
 				<input type="hidden" name="view" value="reservations">
 				<?php
@@ -63,7 +64,7 @@
 			    	</div>
 			    </div>
 			  </div>
-			</form>
+			</form> -->
 		<?php
 $users= array();
 if((isset($_GET["q"]) && isset($_GET["pacient_id"]) && isset($_GET["medic_id"]) && isset($_GET["date_at"])) && ($_GET["q"]!="" || $_GET["pacient_id"]!="" || $_GET["medic_id"]!="" || $_GET["date_at"]!="") ) {
@@ -112,7 +113,7 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 			<th>Tipo de Estudio</th>
 			<th>Medico</th>
 			<th>Fecha</th>
-			<th></th>
+			<th>Ver</th>
 			</thead>
 			<?php
 			foreach($users as $user){
@@ -125,9 +126,8 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 				<td><?php echo $category->name; ?></td>
 				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
 				<td><?php echo $user->date_at." ".$user->time_at; ?></td>
-				<td style="width:100px;">
-				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-dark btn-xs"><i class='fa fa-edit'></i></a>
-				<a href="index.php?action=delreservation&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs"><i class='fa fa-trash'></i></a>
+				<td style="width:50px;">
+				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-success btn-xs"><i class='fa fa-eye'></i></a>
 				</td>
 				</tr>
 				<?php

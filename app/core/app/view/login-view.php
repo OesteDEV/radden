@@ -36,6 +36,9 @@ if(Session::getUID()!=""){
 				    			<input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
 				    		</div>
 				    		<input class="btn btn-primary btn-block" type="submit" value="Iniciar Sesion">
+				    		<div style="text-align: center; margin-top: 50px;">
+				    			<a href="../index.html">Volver</a>
+				    		</div>				    		
 				    	</fieldset>
 			      	</form>
 			    </div>
