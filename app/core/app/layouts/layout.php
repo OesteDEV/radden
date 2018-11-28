@@ -7,7 +7,7 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" / >
   <link href="assets/css/material-dashboard.css" rel="stylesheet"/>
   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
   <script src="assets/js/jquery.min.js" type="text/javascript"></script>
@@ -99,7 +99,7 @@
         </ul>
       </div>
     </div>
-    <div class="main-panel">
+    <div  id="printableArea" class="main-panel">
       <nav class="navbar navbar-transparent navbar-absolute">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -112,15 +112,6 @@
             <a class="navbar-brand" href="./"><b></b></a>
           </div>
           <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">       
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-user"></i>
-                </a>
-                <ul class="dropdown-menu">
-                </ul>
-              </li>
-            </ul>
           </div>
         </div>
       </nav>

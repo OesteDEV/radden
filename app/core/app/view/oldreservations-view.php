@@ -1,18 +1,11 @@
 <div class="row">
 	<div class="col-md-12">
-<div class="btn-group pull-right">
-<!--<div class="btn-group pull-right">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-download"></i> Descargar <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="report/clients-word.php">Word 2007 (.docx)</a></li>
-  </ul>
-</div>
--->
-</div>
-	<h4>Turnos Anteriores</h4>
-<br>
+		<div class="card">
+			<div class="card-header" data-background-color="blue">
+				<h4 class="title">Turnos Anteriores</h4>
+			</div>
+		</div>		
+		<br>
 		<?php
 
 		$users = ReservationData::getOld();
@@ -22,25 +15,29 @@
 
 			<table class="table table-bordered table-hover">
 			<thead>
-			<th>Asunto</th>
-			<th>Paciente</th>
-			<th>Medico</th>
 			<th>Fecha</th>
-			<th></th>
+			<th>Hora</th>				
+			<th>Nombre del Paciente</th>
+			<th>Tipo de Estudio</th>
+			<th>Atendido por el Técnico</th>
+			<th>Ver</th>
 			</thead>
 			<?php
 			foreach($users as $user){
 				$pacient  = $user->getPacient();
 				$medic = $user->getMedic();
+				$category = $user->getCategory();
 				?>
 				<tr>
-				<td><?php echo $user->title; ?></td>
-				<td><?php echo $pacient->name." ".$pacient->lastname; ?></td>
-				<td><?php echo $medic->name." ".$pacient->lastname; ?></td>
-				<td><?php echo $user->date_at." ".$user->time_at; ?></td>
-				<td style="width:130px;">
-				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a>
-				<a href="index.php?action=delreservation&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
+				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
+				<td><?php echo $user->time_at; ?></td>					
+				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
+				<td><?php echo $category->name; ?></td>
+				<td><?php echo $medic->lastname." ".$medic->name; ?></td>				
+				<td style="width:50px;">
+				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-success btn-xs"><i class='fa fa-eye'></i></a>
+				<!--
+				<a href="index.php?action=delreservation&id=<?php echo $user->id;?>" class="btn btn-danger btn-xs">Eliminar</a>-->
 				</td>
 				</tr>
 				<?php
@@ -55,7 +52,7 @@
 
 
 		?>
-
+</table>
 
 	</div>
 </div>

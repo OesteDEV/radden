@@ -21,20 +21,14 @@ $categories = CategoryData::getAll();
     <div class="card-header" data-background-color="blue">
       <h4 class="title">Detalle del Turno</h4>
     </div>
-    <div  id="printableArea" class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2">
       <div class="card">
         <div class="card-content table-responsive">
           <form class="form-horizontal" role="form" method="post" action="./?action=updatereservation">
             <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Asunto</label>
+              <label for="inputEmail1" class="col-md-4">Paciente *</label>
               <div class="col-md-8">
-                <input type="text" name="title" value="<?php echo $reservation->title; ?>" required class="form-control" id="inputEmail1" placeholder="Asunto">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Paciente</label>
-              <div class="col-md-8">
-                <select name="pacient_id" class="form-control" required>
+                <select name="pacient_id" class="form-control" required disabled>
                 <option value="">Seleccionar</option>
                 <?php foreach($pacients as $p):?>
                   <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->pacient_id){ echo "selected"; }?>><?php echo $p->lastname." ".$p->name; ?></option>
@@ -43,9 +37,9 @@ $categories = CategoryData::getAll();
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Tipo de Estudio</label>
+              <label for="inputEmail1" class="col-md-4">Tipo de Estudio *</label>
               <div class="col-md-8">
-              <select name="category_id" class="form-control">
+              <select name="category_id" class="form-control" required disabled>
               <option value="">Seleccionar</option>      
               <?php foreach($categories as $p):?>
               <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->category_id){ echo "selected"; }?>><?php echo $p->name; ?></option>      
@@ -54,9 +48,9 @@ $categories = CategoryData::getAll();
               </div>
             </div> 
             <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Medico</label>
+              <label for="inputEmail1" class="col-md-4">Medico *</label>
               <div class="col-md-8">
-                <select name="medic_id" class="form-control" required>
+                <select name="medic_id" class="form-control">
                   <option value="">Seleccionar</option>
                   <?php foreach($medics as $p):?>
                     <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->medic_id){ echo "selected"; }?>><?php echo $p->lastname." ".$p->name; ?></option>
@@ -76,7 +70,7 @@ $categories = CategoryData::getAll();
             <div class="form-group">
               <label for="inputEmail1" class="col-md-4">Estado del turno</label>
               <div class="col-md-8">
-                <select name="status_id" class="form-control" required>
+                <select name="status_id" class="form-control">
                 <?php foreach($statuses as $p):?>
                   <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->status_id){ echo "selected"; }?>><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
@@ -86,20 +80,11 @@ $categories = CategoryData::getAll();
             <div class="form-group">
               <label for="inputEmail1" class="col-md-4">Estado del pago</label>
               <div class="col-md-8">
-                <select name="payment_id" class="form-control" required>
+                <select name="payment_id" class="form-control">
                 <?php foreach($payments as $p):?>
                   <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->payment_id){ echo "selected"; }?>><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
                 </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Costo</label>
-              <div class="col-md-8">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-usd"></i></span>
-                  <input type="text" class="form-control" value="<?php echo $reservation->price;?>" name="price" placeholder="Costo">
-                </div>
               </div>
             </div>
             <div class="form-group">
@@ -110,6 +95,21 @@ $categories = CategoryData::getAll();
                   <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->payment_type_id){ echo "selected"; }?>><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
               </select>
+              </div>
+            </div>            
+            <div class="form-group">
+              <label for="inputEmail1" class="col-md-4">Costo</label>
+              <div class="col-md-8">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-usd"></i></span>
+                  <input type="text" class="form-control" value="<?php echo $reservation->price;?>" name="price" placeholder="Costo" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail1" class="col-md-4">Informe</label>
+              <div class="col-md-8">
+              <textarea rows="5" class="form-control" name="info" placeholder="Informe" value="<?php echo $reservation->info;?>"></textarea>
               </div>
             </div>
             <div class="form-group">

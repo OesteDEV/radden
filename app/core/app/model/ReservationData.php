@@ -19,8 +19,8 @@ class reservationData {
 	public function getPayment_type(){ return Payment_typeData::getById($this->payment_type_id); }
 
 	public function add(){
-		$sql = "insert into reservation (title,medic_id,category_id,date_at,time_at,pacient_id,user_id,price,status_id,payment_id,payment_type_id,created_at) ";
-		$sql .= "value (\"$this->title\",\"$this->medic_id\",\"$this->category_id\",\"$this->date_at\",\"$this->time_at\",$this->pacient_id,$this->user_id,\"$this->price\",$this->status_id,$this->payment_id,$this->payment_type_id,$this->created_at)";
+		$sql = "insert into reservation (medic_id,category_id,date_at,time_at,pacient_id,user_id,price,status_id,payment_id,payment_type_id,created_at) ";
+		$sql .= "value (\"$this->medic_id\",\"$this->category_id\",\"$this->date_at\",\"$this->time_at\",$this->pacient_id,$this->user_id,\"$this->price\",$this->status_id,$this->payment_id,$this->payment_type_id,$this->created_at)";
 		return Executor::doit($sql);
 	}
 
@@ -35,7 +35,7 @@ class reservationData {
 
 // partiendo de que ya tenemos creado un objecto reservationData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set title=\"$this->title\",pacient_id=\"$this->pacient_id\",medic_id=\"$this->medic_id\", ,category_id=\"$this->category_id\",date_at=\"$this->date_at\",time_at=\"$this->time_at\",status_id=\"$this->status_id\",payment_id=\"$this->payment_id\",payment_type_id=\"$this->payment_type_id\",price=\"$this->price\" where id=$this->id";
+		$sql = "update ".self::$tablename." set pacient_id=\"$this->pacient_id\",medic_id=\"$this->medic_id\",category_id=\"$this->category_id\",date_at=\"$this->date_at\",time_at=\"$this->time_at\",status_id=\"$this->status_id\",payment_id=\"$this->payment_id\",payment_type_id=\"$this->payment_type_id\",price=\"$this->price\",info=\"$this->info\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

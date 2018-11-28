@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail1" class="col-md-4">Direccion*</label>
+            <label for="inputEmail1" class="col-md-4">Direccion</label>
             <div class="col-md-8">
               <input type="text" name="address" value="<?php echo $user->address;?>" class="form-control" required id="username" placeholder="Direccion">
             </div>

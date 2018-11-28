@@ -109,10 +109,11 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 			?>
 			<table class="table table-bordered table-hover">
 			<thead>
-			<th>Paciente</th>
-			<th>Tipo de Estudio</th>
-			<th>Medico</th>
 			<th>Fecha</th>
+			<th>Hora</th>				
+			<th>Nombre del Paciente</th>
+			<th>Tipo de Estudio a realizar</th>
+			<th>Técnico asignado</th>
 			<th>Ver</th>
 			</thead>
 			<?php
@@ -122,10 +123,11 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 				$category = $user->getCategory();
 				?>
 				<tr>
+				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
+				<td><?php echo $user->time_at; ?></td>					
 				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
 				<td><?php echo $category->name; ?></td>
 				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
-				<td><?php echo $user->date_at." ".$user->time_at; ?></td>
 				<td style="width:50px;">
 				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-success btn-xs"><i class='fa fa-eye'></i></a>
 				</td>

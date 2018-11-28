@@ -2,7 +2,6 @@
 $rx = ReservationData::getRepeated($_POST["pacient_id"],$_POST["medic_id"],$_POST["category_id"],$_POST["payment_type_id"],$_POST["date_at"],$_POST["time_at"]);
 if($rx==null){
 $r = new ReservationData();
-$r->title = $_POST["title"];
 $r->pacient_id = $_POST["pacient_id"];
 $r->medic_id = $_POST["medic_id"];
 $r->category_id = $_POST["category_id"];

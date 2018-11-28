@@ -14,13 +14,7 @@ $categories = CategoryData::getAll();
     <div class="col-md-8 col-md-offset-2">
       <form class="form-horizontal" role="form" method="post" action="./?action=addreservation">
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Asunto</label>
-          <div class="col-md-8">
-            <input type="text" name="title" required class="form-control" id="inputEmail1">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Paciente</label>
+          <label for="inputEmail1" class="col-md-4 ">Paciente *</label>
           <div class="col-md-8">
             <select name="pacient_id" class="form-control selectpicker" data-live-search="true" required>
               <option>Seleccionar</option>
@@ -31,7 +25,7 @@ $categories = CategoryData::getAll();
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-4">Tipo de Estudio</label>
+          <label for="inputEmail1" class="col-md-4">Tipo de Estudio *</label>
           <div class="col-md-8">
           <select name="category_id" class="form-control selectpicker" data-live-search="true">
           <option>Seleccionar</option>      
@@ -42,9 +36,9 @@ $categories = CategoryData::getAll();
           </div>
         </div>  
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Medico</label>
+          <label for="inputEmail1" class="col-md-4 ">Medico *</label>
           <div class="col-md-8">
-            <select name="medic_id" class="form-control" required>
+            <select name="medic_id" class="form-control selectpicker" data-live-search="true" required>
             <option value="">Seleccionar</option>
               <?php foreach($medics as $p):?>
                 <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
@@ -53,13 +47,13 @@ $categories = CategoryData::getAll();
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Fecha</label>
+          <label for="inputEmail1" class="col-md-4 ">Fecha *</label>
           <div class="col-md-8">
             <input type="date" name="date_at" required class="form-control" id="inputEmail1" placeholder="Fecha">
           </div>
         </div>
         <div class="form-group">          
-          <label for="inputEmail1" class="col-md-4 ">Hora</label>
+          <label for="inputEmail1" class="col-md-4 ">Hora *</label>
           <div class="col-md-8">
             <input type="time" name="time_at" required class="form-control" id="inputEmail1" placeholder="Hora">
           </div>
@@ -67,7 +61,7 @@ $categories = CategoryData::getAll();
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4 ">Estado del turno</label>
           <div class="col-md-8">
-            <select name="status_id" class="form-control" required>
+            <select name="status_id" class="form-control selectpicker" data-live-search="true">
               <?php foreach($statuses as $p):?>
                 <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
               <?php endforeach; ?>
@@ -77,7 +71,7 @@ $categories = CategoryData::getAll();
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4 ">Estado del pago</label>
           <div class="col-md-8">
-          <select name="payment_id" class="form-control" required>
+          <select name="payment_id" class="form-control selectpicker" data-live-search="true">
             <?php foreach($payments as $p):?>
               <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
             <?php endforeach; ?>
@@ -96,7 +90,7 @@ $categories = CategoryData::getAll();
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4 ">Forma de pago</label>
           <div class="col-md-8">
-          <select name="payment_type_id" class="form-control" required>
+          <select name="payment_type_id" class="form-control selectpicker" data-live-search="true">
             <?php foreach($payments_types as $p):?>
               <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
             <?php endforeach; ?>
