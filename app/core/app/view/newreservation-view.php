@@ -9,95 +9,120 @@ $categories = CategoryData::getAll();
 <div class="card">
   <div class="row">
     <div class="card-header" data-background-color="blue">
-      <h4 class="title">Atencion con Turno</h4>        
+      <h6 class="title">Atencion con Turno</h6>        
     </div>    
-    <div class="col-md-8 col-md-offset-2">
-      <form class="form-horizontal" role="form" method="post" action="./?action=addreservation">
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Paciente *</label>
-          <div class="col-md-8">
-            <select name="pacient_id" class="form-control selectpicker" data-live-search="true" required>
-              <option>Seleccionar</option>
-              <?php foreach($pacients as $p):?>
-                <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
-              <?php endforeach; ?>
-            </select>
+    <div class="col-md-offset-1 col-md-10">
+      <hr>
+      <form class="form-vertical" role="form" method="post" action="./?action=addreservation">
+        <div class="row">
+          <div class="form-groups">
+            <div class="col-md-3">
+              <h6>Fecha</h6>
+              <input type="date" name="date_at" required class="form-control" id="inputEmail1" placeholder="Fecha">
+            </div>
           </div>
+          <div class="form-groups">          
+            <div class="col-md-3">
+              <h6>Hora</h6>
+              <input type="time" name="time_at" required class="form-control" id="inputEmail1" placeholder="Hora">
+            </div>
+          </div>         
         </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4">Tipo de Estudio *</label>
-          <div class="col-md-8">
-          <select name="category_id" class="form-control selectpicker" data-live-search="true">
-          <option>Seleccionar</option>      
-          <?php foreach($categories as $p):?>
-          <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>      
-          <?php endforeach;?>
-          </select>
+        <hr> 
+        <div class="row">
+          <div class="form-groups">
+            <div class="col-md-6">
+              <h6>Paciente</h6>
+              <select name="pacient_id" class="selectpicker" data-width="100%" data-live-search="true" required>
+                <option></option>
+                <?php foreach($pacients as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
           </div>
-        </div>  
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Medico *</label>
-          <div class="col-md-8">
-            <select name="medic_id" class="form-control selectpicker" data-live-search="true" required>
-            <option value="">Seleccionar</option>
-              <?php foreach($medics as $p):?>
-                <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
-              <?php endforeach; ?>
-            </select>
-          </div>
+          <div class="form-groups">
+            <div class="col-md-6">
+              <h6>Tipo de Cobertura</h6>
+              <select name="medic_id" class="selectpicker" data-width="100%" data-live-search="true" required>
+                <option></option>
+                <?php foreach($medics as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+          </div>           
         </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Fecha *</label>
-          <div class="col-md-8">
-            <input type="date" name="date_at" required class="form-control" id="inputEmail1" placeholder="Fecha">
+        <hr>
+        <div class="row">
+          <div class="form-groups">
+            <div class="col-md-6">
+              <h6>Tipo de Estudio</h6>
+              <select name="category_id" class="sel selectpicker" data-width="100%" data-live-search="true">
+              <option></option>      
+              <?php foreach($categories as $p):?>
+              <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>      
+              <?php endforeach;?>
+              </select>
+            </div>
           </div>
+          <div class="form-groups">
+            <div class="col-md-6">
+              <h6>Técnico Asignado</h6>
+              <select name="medic_id" class="selectpicker" data-width="100%" data-live-search="true" required>
+              <option></option> 
+                <?php foreach($medics as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+          </div>          
         </div>
-        <div class="form-group">          
-          <label for="inputEmail1" class="col-md-4 ">Hora *</label>
-          <div class="col-md-8">
-            <input type="time" name="time_at" required class="form-control" id="inputEmail1" placeholder="Hora">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Estado del turno</label>
-          <div class="col-md-8">
-            <select name="status_id" class="form-control selectpicker" data-live-search="true">
-              <?php foreach($statuses as $p):?>
-                <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
-              <?php endforeach; ?>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Estado del pago</label>
-          <div class="col-md-8">
-          <select name="payment_id" class="form-control selectpicker" data-live-search="true">
-            <?php foreach($payments as $p):?>
-              <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
-            <?php endforeach; ?>
-          </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Costo</label>
-          <div class="col-md-8">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-usd"></i></span>
-              <input type="text" class="form-control" name="price">
+        <hr>
+        <div class="row">
+          <div class="form-groups">
+            <div class="col-md-6">
+              <h6>Estado de pago</h6> 
+              <select name="payment_id" class="selectpicker" data-width="100%" data-live-search="true">
+              <option></option>                
+                <?php foreach($payments as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <h6>Estado del turno</h6>
+              <select name="status_id" class="selectpicker" data-width="100%" data-live-search="true">
+              <option></option>               
+                <?php foreach($statuses as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Forma de pago</label>
-          <div class="col-md-8">
-          <select name="payment_type_id" class="form-control selectpicker" data-live-search="true">
-            <?php foreach($payments_types as $p):?>
-              <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
-            <?php endforeach; ?>
-          </select>
-          </div>
+        <hr>
+        <div class="row">
+          <div class="form-groups">
+            <div class="col-md-6">
+              <h6>Costo del Estudio</h6>
+              <div class="input-groups">
+                <input type="number" step="0.01" class="form-control" name="price">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6>Forma de pago</h6>
+              <select name="payment_type_id" class="selectpicker" data-width="100%" data-live-search="true">
+                <option></option>
+                <?php foreach($payments_types as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+          </div>          
         </div>
-        <div class="form-group">
+        <br>
+        <div class="form-groups">
           <div class="col-md-offset-4 col-md-4 col-md-offset-4">
             <button type="submit" class="btn btn-primary btn-lg btn-block"><i class='fa fa-plus-circle'></i> Guardar Turno</button>
           </div>

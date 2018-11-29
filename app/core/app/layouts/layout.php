@@ -17,17 +17,9 @@
   <script src='assets/fullcalendar/moment.min.js'></script>
   <script src='assets/fullcalendar/fullcalendar.min.js'></script>
   <?php endif; ?>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
-
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
-
-
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script> 
 </head>
 
 <body>
@@ -62,13 +54,13 @@
             </li>
             <li>
                 <a href="./?view=medics">
-                    <i class="fa fa-support"></i>
+                    <i class="fa fa-user-md"></i>
                     <p>Técnicos</p>
                 </a>
             </li>
             <li>
                 <a href="./?view=categories">
-                    <i class="fa fa-th-list"></i>
+                    <i class="fa fa-medkit"></i>
                     <p>Tipos de Estudios</p>
                 </a>
             </li>

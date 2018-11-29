@@ -4607,11 +4607,33 @@ label{
   padding-top: 20px;
 
 }
-.form-group{
-  margin-bottom: 5px;
+.form-groups {
+    margin: 3px;
 }
 
 td {
     font-size: 13px;
     font-weight: bold;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-groups {
+    width: 100%;
+    margin-top: 11px;
+}
+
+.panel-bodys {
+    float: right;
+}
+
+.sel {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
 }

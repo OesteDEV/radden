@@ -18,7 +18,7 @@ $word = new  PhpOffice\PhpWord\PhpWord();
 $alumns = $_SESSION["report_data"];
 
 $section1 = $word->AddSection();
-$section1->addText("REPORTE DE CITAS",array("size"=>22,"bold"=>true,"align"=>"right"));
+$section1->addText("REPORTE",array("size"=>22,"bold"=>true,"align"=>"right"));
 
 
 $styleTable = array('borderSize' => 6, 'borderColor' => '888888', 'cellMargin' => 40);

@@ -2,53 +2,45 @@
 	<div class="col-md-12">
 <div class="card">
   <div class="card-header" data-background-color="blue">
-      <h4 class="title">Reporte de citas</h4>
+      <h4 class="title">Reportes</h4>
   </div>
   <div class="card-content table-responsive">
+	<form class="form-horizontal" role="form">
+		<input type="hidden" name="view" value="reports">
+        <?php
+		$coverages = CoverageData::getAll();
+		$medics = MedicData::getAll();
+		$statuses = StatusData::getAll();
+		$payments = PaymentData::getAll();
+        ?>
 
-
-<form class="form-horizontal" role="form">
-	<input type="hidden" name="view" value="reports">
-	        <?php
-	$pacients = PacientData::getAll();
-	$medics = MedicData::getAll();
-	$statuses = StatusData::getAll();
-	$payments = PaymentData::getAll();
-	        ?>
-	<div class="form-group">
-	    <div class="col-lg-4">
+  	<div class="form-group">
+  		<h5>Filtrar por:</h5>
+		<div class="col-md-2">
 			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-male"></i></span>
-				<select name="pacient_id" class="form-control">
-			  	<option value="">PACIENTE</option>
-				  <?php foreach($pacients as $p):?>
-				    <option value="<?php echo $p->id; ?>" <?php if(isset($_GET["pacient_id"]) && $_GET["pacient_id"]==$p->id){ echo "selected"; } ?>><?php echo $p->id." - ".$p->name." ".$p->lastname; ?></option>
+			  <span>Cobertura</span>
+				<select name="coverage_id" class="form-control">
+				<option value="">Seleccionar</option>
+				  <?php foreach($coverages as $p):?>
+				    <option value="<?php echo $p->id; ?>" <?php if(isset($_GET["coverage_id"]) && $_GET["coverage_id"]==$p->id){ echo "selected"; } ?>><?php echo $p->name; ?></option>
 				  <?php endforeach; ?>
 				</select>
 			</div>
-	    </div>
-	    <div class="col-lg-4">
+		</div>
+		<div class="col-md-2">
 			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-support"></i></span>
+			  <span >Médico</span>
 				<select name="medic_id" class="form-control">
-				<option value="">MEDICO</option>
+				<option value="">Seleccionar</option>
 				  <?php foreach($medics as $p):?>
 				    <option value="<?php echo $p->id; ?>" <?php if(isset($_GET["medic_id"]) && $_GET["medic_id"]==$p->id){ echo "selected"; } ?>><?php echo $p->id." - ".$p->name." ".$p->lastname; ?></option>
 				  <?php endforeach; ?>
 				</select>
 			</div>
-	    </div>
-	    <div class="col-lg-4">
+		</div>
+	    <div class="col-md-2">
 			<div class="input-group">
-			  <span class="input-group-addon">INICIO</span>
-			  <input type="date" name="start_at" value="<?php if(isset($_GET["start_at"]) && $_GET["start_at"]!=""){ echo $_GET["start_at"]; } ?>" class="form-control" placeholder="Palabra clave">
-			</div>
-	    </div>
-	</div>
-	<div class="form-group">
-	    <div class="col-lg-4">
-			<div class="input-group">
-			  	<span class="input-group-addon">ESTADO</span>
+			  <span >Estado del turno</span>
 				<select name="status_id" class="form-control">
 				  <?php foreach($statuses as $p):?>
 				    <option value="<?php echo $p->id; ?>" <?php if(isset($_GET["status_id"]) && $_GET["status_id"]==$p->id){ echo "selected"; } ?>><?php echo $p->name; ?></option>
@@ -56,33 +48,40 @@
 				</select>
 			</div>
 	    </div>
-	    <div class="col-lg-4">
+	    <div class="col-md-2">
 			<div class="input-group">
-				<span class="input-group-addon">PAGO</span>
+			  <span >Estado del pago</span>
 				<select name="payment_id" class="form-control">
 				  <?php foreach($payments as $p):?>
 				    <option value="<?php echo $p->id; ?>" <?php if(isset($_GET["payment_id"]) && $_GET["payment_id"]==$p->id){ echo "selected"; } ?>><?php echo $p->name; ?></option>
 				  <?php endforeach; ?>
 				</select>
 			</div>
-	    </div>
-	    <div class="col-lg-4">
+	    </div>    
+	    <div class="col-md-2">
 			<div class="input-group">
-			  <span class="input-group-addon">FIN</span>
+			  <span >Desde</span>
+			  <input type="date" name="start_at" value="<?php if(isset($_GET["start_at"]) && $_GET["start_at"]!=""){ echo $_GET["start_at"]; } ?>" class="form-control" placeholder="Palabra clave">
+			</div>
+	    </div>
+	    <div class="col-md-2">
+			<div class="input-group">
+			  <span >Hasta</span>
 			  <input type="date" name="finish_at" value="<?php if(isset($_GET["finish_at"]) && $_GET["finish_at"]!=""){ echo $_GET["finish_at"]; } ?>" class="form-control" placeholder="Palabra clave">
 			</div>
 	    </div>
-	</div>
+	
 	<div class="row">
-		<div class="col-lg-3">
-			<button class="btn btn-primary">Procesar</button>			
-		</div>		
+	    <div class="col-md-2">
+	    	<button class="btn btn-primary btn-block">Procesar</button>
+	    </div>
+	</div>
 	</div>
 </form>
 
-<?php
+		<?php
 $users= array();
-if((isset($_GET["status_id"]) && isset($_GET["payment_id"]) && isset($_GET["pacient_id"]) && isset($_GET["medic_id"]) && isset($_GET["start_at"]) && isset($_GET["finish_at"]) ) && ($_GET["status_id"]!="" ||$_GET["payment_id"]!="" || $_GET["pacient_id"]!="" || $_GET["medic_id"]!="" || ($_GET["start_at"]!="" && $_GET["finish_at"]!="") ) ) {
+if((isset($_GET["status_id"]) && isset($_GET["payment_id"]) && isset($_GET["coverage_id"]) && isset($_GET["medic_id"]) && isset($_GET["start_at"]) && isset($_GET["finish_at"]) ) && ($_GET["status_id"]!="" ||$_GET["payment_id"]!="" || $_GET["coverage_id"]!="" || $_GET["medic_id"]!="" || ($_GET["start_at"]!="" && $_GET["finish_at"]!="") ) ) {
 $sql = "select * from reservation where ";
 if($_GET["status_id"]!=""){
 	$sql .= " status_id = ".$_GET["status_id"];
@@ -96,15 +95,15 @@ if($_GET["status_id"]!=""){
 }
 
 
-if($_GET["pacient_id"]!=""){
+if($_GET["coverage_id"]!=""){
 if($_GET["status_id"]!=""||$_GET["payment_id"]!=""){
 	$sql .= " and ";
 }
-	$sql .= " pacient_id = ".$_GET["pacient_id"];
+	$sql .= " coverage_id = ".$_GET["coverage_id"];
 }
 
 if($_GET["medic_id"]!=""){
-if($_GET["status_id"]!=""||$_GET["pacient_id"]!=""||$_GET["payment_id"]!=""){
+if($_GET["status_id"]!=""||$_GET["coverage_id"]!=""||$_GET["payment_id"]!=""){
 	$sql .= " and ";
 }
 
@@ -114,7 +113,7 @@ if($_GET["status_id"]!=""||$_GET["pacient_id"]!=""||$_GET["payment_id"]!=""){
 
 
 if($_GET["start_at"]!="" && $_GET["finish_at"]){
-if($_GET["status_id"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ||$_GET["payment_id"]!="" ){
+if($_GET["status_id"]!=""||$_GET["coverage_id"]!="" ||$_GET["medic_id"]!="" ||$_GET["payment_id"]!="" ){
 	$sql .= " and ";
 }
 
@@ -153,7 +152,7 @@ if($_GET["status_id"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ||$_G
 				?>
 				<tr>
 				<td><?php echo $user->title; ?></td>
-				<td><?php echo $pacient->name." ".$pacient->lastname; ?></td>
+				<td><?php echo $pacient->name; ?></td>
 				<td><?php echo $medic->name." ".$medic->lastname; ?></td>
 				<td><?php echo $user->date_at." ".$user->time_at; ?></td>
 				<td><?php echo $user->getStatus()->name; ?></td>
@@ -166,9 +165,9 @@ if($_GET["status_id"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ||$_G
 			}
 			echo "</table>";
 			?>
-			<div class="panel-body">
-			<h1>Total: $ <?php echo number_format($total,2,".",",");?></h1>
-			<a href="./report/report-word.php" class="btn btn-default"><i class="fa fa-download"> Descargar</i></a>
+			<div class="panel-bodys">
+			<h3>Total: $ <?php echo number_format($total,2,".",",");?></h3>
+			<a href="./report/report-word.php"><i class="fa fa-download"> Descargar (.docx)</i></a>
 
 			</div>
 			<?php
@@ -176,7 +175,7 @@ if($_GET["status_id"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ||$_G
 
 
 		}else{
-			echo "<p class='alert alert-danger'>No hay pacientes</p>";
+			echo "<p class='alert alert-danger'>No existen registros</p>";
 		}
 
 
