@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2018 a las 05:33:20
+-- Tiempo de generación: 30-11-2018 a las 00:32:51
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -64,7 +64,8 @@ INSERT INTO `coverage` (`id`, `name`, `lastname`) VALUES
 (1, 'ACCORD SALUD', 'Accord Salud'),
 (2, 'OSDE', 'OrganizaciÃ³n de Servicios Directos Empresarios'),
 (3, 'IOMA', 'Instituto de Obra MÃ©dico Asistencial'),
-(4, 'OSECAC', 'Obra Social de los Empleados de Comercio y Actividades Civiles');
+(4, 'OSECAC', 'Obra Social de los Empleados de Comercio y Actividades Civiles'),
+(5, 'PARTICULAR', 'Particular en Efectivo');
 
 -- --------------------------------------------------------
 
@@ -187,6 +188,7 @@ CREATE TABLE `reservation` (
   `created_at` datetime DEFAULT NULL,
   `pacient_id` int(11) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
+  `coverage_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `medic_id` int(11) DEFAULT NULL,
   `price` double DEFAULT NULL,
@@ -201,10 +203,12 @@ CREATE TABLE `reservation` (
 -- Volcado de datos para la tabla `reservation`
 --
 
-INSERT INTO `reservation` (`id`, `title`, `date_at`, `time_at`, `created_at`, `pacient_id`, `category_id`, `user_id`, `medic_id`, `price`, `info`, `is_web`, `payment_id`, `payment_type_id`, `status_id`) VALUES
-(6, NULL, '2018-11-27', '23:15', '2018-11-27 23:15:17', 8, 2, 1, 2, 100, '', 0, 2, 1, 3),
-(7, NULL, '2018-11-26', '17:20', '2018-11-27 23:28:28', 9, 2, 1, 1, 100, '', 0, 3, 1, 2),
-(8, NULL, '2018-11-28', '11:00', '2018-11-28 01:04:55', 8, 3, 1, 1, 550, '', 0, 1, 4, 3);
+INSERT INTO `reservation` (`id`, `title`, `date_at`, `time_at`, `created_at`, `pacient_id`, `category_id`, `coverage_id`, `user_id`, `medic_id`, `price`, `info`, `is_web`, `payment_id`, `payment_type_id`, `status_id`) VALUES
+(6, NULL, '2018-11-27', '23:15', '2018-11-27 23:15:17', 8, 2, NULL, 1, 2, 100, '', 0, 2, 1, 3),
+(7, NULL, '2018-11-26', '17:20', '2018-11-27 23:28:28', 9, 2, NULL, 1, 1, 100, '', 0, 3, 1, 2),
+(8, NULL, '2018-11-28', '11:00', '2018-11-28 01:04:55', 8, 3, NULL, 1, 1, 550, '', 0, 1, 4, 3),
+(9, NULL, '2018-11-29', '19:00', '2018-11-29 19:35:44', 8, 4, 3, 1, 2, 225, NULL, 0, 1, 1, 1),
+(10, NULL, '2018-11-30', '12:00', '2018-11-29 19:46:25', 9, 6, 3, 1, 1, 430, NULL, 0, 1, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -305,6 +309,7 @@ ALTER TABLE `reservation`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `pacient_id` (`pacient_id`),
   ADD KEY `category_id` (`category_id`),
+  ADD KEY `coverage_id` (`coverage_id`),
   ADD KEY `medic_id` (`medic_id`);
 
 --
@@ -333,7 +338,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `coverage`
 --
 ALTER TABLE `coverage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `medic`
@@ -363,7 +368,7 @@ ALTER TABLE `payment_type`
 -- AUTO_INCREMENT de la tabla `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `status`

@@ -1,5 +1,6 @@
 <?php
 $pacients = PacientData::getAll();
+$coverages = CoverageData::getAll();
 $medics = MedicData::getAll();
 $statuses = StatusData::getAll();
 $payments = PaymentData::getAll();
@@ -11,19 +12,19 @@ $categories = CategoryData::getAll();
     <div class="card-header" data-background-color="blue">
       <h6 class="title">Atencion con Turno</h6>        
     </div>    
-    <div class="col-md-offset-1 col-md-10">
+    <div class="col-md-offset-2 col-md-8">
       <hr>
       <form class="form-vertical" role="form" method="post" action="./?action=addreservation">
         <div class="row">
           <div class="form-groups">
             <div class="col-md-3">
-              <h6>Fecha</h6>
+              <label>Fecha</label>
               <input type="date" name="date_at" required class="form-control" id="inputEmail1" placeholder="Fecha">
             </div>
           </div>
           <div class="form-groups">          
             <div class="col-md-3">
-              <h6>Hora</h6>
+              <label>Hora</label>
               <input type="time" name="time_at" required class="form-control" id="inputEmail1" placeholder="Hora">
             </div>
           </div>         
@@ -32,9 +33,9 @@ $categories = CategoryData::getAll();
         <div class="row">
           <div class="form-groups">
             <div class="col-md-6">
-              <h6>Paciente</h6>
+              <label>Paciente</label>
               <select name="pacient_id" class="selectpicker" data-width="100%" data-live-search="true" required>
-                <option></option>
+                <option>Seleccionar </option>
                 <?php foreach($pacients as $p):?>
                   <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
                 <?php endforeach; ?>
@@ -43,11 +44,11 @@ $categories = CategoryData::getAll();
           </div>
           <div class="form-groups">
             <div class="col-md-6">
-              <h6>Tipo de Cobertura</h6>
-              <select name="medic_id" class="selectpicker" data-width="100%" data-live-search="true" required>
-                <option></option>
-                <?php foreach($medics as $p):?>
-                  <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
+              <label>Tipo de Cobertura</label>
+              <select name="coverage_id" class="selectpicker" data-width="100%" data-live-search="true" required>
+                <option>Seleccionar </option>
+                <?php foreach($coverages as $p):?>
+                  <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
               </select>
             </div>
@@ -57,9 +58,9 @@ $categories = CategoryData::getAll();
         <div class="row">
           <div class="form-groups">
             <div class="col-md-6">
-              <h6>Tipo de Estudio</h6>
+              <label>Tipo de Estudio</label>
               <select name="category_id" class="sel selectpicker" data-width="100%" data-live-search="true">
-              <option></option>      
+              <option>Seleccionar </option>      
               <?php foreach($categories as $p):?>
               <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>      
               <?php endforeach;?>
@@ -68,9 +69,9 @@ $categories = CategoryData::getAll();
           </div>
           <div class="form-groups">
             <div class="col-md-6">
-              <h6>Técnico Asignado</h6>
+              <label>Técnico Asignado</label>
               <select name="medic_id" class="selectpicker" data-width="100%" data-live-search="true" required>
-              <option></option> 
+              <option>Seleccionar </option> 
                 <?php foreach($medics as $p):?>
                   <option value="<?php echo $p->id; ?>"><?php echo $p->lastname." ".$p->name; ?></option>
                 <?php endforeach; ?>
@@ -82,18 +83,18 @@ $categories = CategoryData::getAll();
         <div class="row">
           <div class="form-groups">
             <div class="col-md-6">
-              <h6>Estado de pago</h6> 
+              <label>Estado de pago</label> 
               <select name="payment_id" class="selectpicker" data-width="100%" data-live-search="true">
-              <option></option>                
+              <option>Seleccionar </option>                
                 <?php foreach($payments as $p):?>
                   <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
               </select>
             </div>
             <div class="col-md-6">
-              <h6>Estado del turno</h6>
+              <label>Estado del turno</label>
               <select name="status_id" class="selectpicker" data-width="100%" data-live-search="true">
-              <option></option>               
+              <option>Seleccionar </option>               
                 <?php foreach($statuses as $p):?>
                   <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
@@ -105,15 +106,15 @@ $categories = CategoryData::getAll();
         <div class="row">
           <div class="form-groups">
             <div class="col-md-6">
-              <h6>Costo del Estudio</h6>
+              <label>Costo del Estudio</label>
               <div class="input-groups">
                 <input type="number" step="0.01" class="form-control" name="price">
               </div>
             </div>
             <div class="col-md-6">
-              <h6>Forma de pago</h6>
+              <label>Forma de pago</label>
               <select name="payment_type_id" class="selectpicker" data-width="100%" data-live-search="true">
-                <option></option>
+                <option>Seleccionar </option>
                 <?php foreach($payments_types as $p):?>
                   <option value="<?php echo $p->id; ?>"><?php echo $p->name; ?></option>
                 <?php endforeach; ?>
@@ -121,6 +122,7 @@ $categories = CategoryData::getAll();
             </div>
           </div>          
         </div>
+        <hr>
         <br>
         <div class="form-groups">
           <div class="col-md-offset-4 col-md-4 col-md-offset-4">

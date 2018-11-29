@@ -6,6 +6,7 @@ $statuses = StatusData::getAll();
 $payments = PaymentData::getAll();
 $payments_types = Payment_typeData::getAll();
 $categories = CategoryData::getAll();
+$coverages = CoverageData::getAll();
 ?>
 <script>
   function printDiv(divName) {
@@ -96,7 +97,17 @@ $categories = CategoryData::getAll();
                 <?php endforeach; ?>
               </select>
               </div>
-            </div>            
+            </div>
+            <div class="form-group">
+              <label for="inputEmail1" class="col-md-4 ">Tipo de Cobertura</label>
+              <div class="col-md-8">
+              <select name="coverage_id" class="form-control" required>
+                <?php foreach($coverages as $p):?>
+                  <option value="<?php echo $p->id; ?>" <?php if($p->id==$reservation->coverage_id){ echo "selected"; }?>><?php echo $p->name; ?></option>
+                <?php endforeach; ?>
+              </select>
+              </div>
+            </div>             
             <div class="form-group">
               <label for="inputEmail1" class="col-md-4">Costo</label>
               <div class="col-md-8">

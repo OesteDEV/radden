@@ -4635,5 +4635,24 @@ td {
 
 hr {
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #aaaaaa;
+}
+select {
+    font-weight: bold;
+}
+
+.form-control {
+    font-weight: bold;
+    color: black;
+}
+.filter-option-inner-inner {
+    font-weight: bold;
+    color: black;
+    text-transform: none;
+    font-size: 14px;
+}
+label {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
