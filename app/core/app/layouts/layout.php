@@ -116,8 +116,8 @@
       </div>
       <footer class="footer">
         <div class="container-fluid">
-          <p class="copyright pull-right">
-            <a href="http://www.oestedev.com" target="_blank">Oeste-DEV</a> &copy; 2018 
+          <p class="copyright pull-right">Sistema Web creado por     
+            <a href="http://www.oestedev.com" target="_blank"><img style="width: 60px" src="../img/logo.png">  </a>
           </p>
         </div>
       </footer>

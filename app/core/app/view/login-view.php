@@ -3,13 +3,8 @@
 if(Session::getUID()!=""){
 		print "<script>window.location='index.php?view=home';</script>";
 }
-
 ?>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">		
@@ -24,9 +19,9 @@ if(Session::getUID()!=""){
     	 	endif; ?>
 			<div class="card">
   				<div class="">
-      				<h4 class="title">Acceder al Sistema</h4>
+  					<img src="../img/header-bg.jpg">
   				</div>
-  				<div class="card-content">
+  				<div class="card-content col-md-offset-1 col-md-10">
 			    	<form accept-charset="UTF-8" role="form" method="post" action="index.php?view=processlogin">
 	                    <fieldset>
 				    	  	<div class="form-group">
@@ -35,10 +30,15 @@ if(Session::getUID()!=""){
 				    		<div class="form-group">
 				    			<input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
 				    		</div>
-				    		<input class="btn btn-primary btn-block" type="submit" value="Iniciar Sesion">
-				    		<div style="text-align: center; margin-top: 50px;">
-				    			<a href="../index.html">Volver</a>
-				    		</div>				    		
+				    		
+				    		<div class="row">
+				    			<div class="col-md-6">
+				    				<a class="btn btn-primary btn-block" href="../index.html">Volver</a>
+				    			</div>
+				    			<div class="col-md-6">
+				    				<input class="btn btn-primary btn-block" type="submit" value="Iniciar Sesion">
+				    			</div>				    			
+				    		</div>			    		
 				    	</fieldset>
 			      	</form>
 			    </div>
