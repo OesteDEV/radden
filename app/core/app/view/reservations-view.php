@@ -7,14 +7,15 @@
 			<div class="card-content table-responsive">
 				<div class="row">
 					<div class="col-md-2">
-						<a href="./index.php?view=newreservation" class="btn btn-block btn-primary"><i class='fa fa-plus-circle'></i> Nuevo Turno</a>						
+						<a href="./index.php?view=newreservation" class="btn btn-block btn-primary"><i class='fa fa-plus-circle'></i> Nuevo Turno</a>
 					</div>
 					<div class="col-md-2">
-						<a href="./index.php?view=oldreservations" class="btn btn-block btn-warning"><i class='fa fa-folder-open'></i> Anteriores</a>						
-					</div>					
+						<a href="./index.php?view=oldreservations" class="btn btn-block btn-warning"><i class='fa fa-folder-open'></i> Anteriores</a>
+					</div>
 				</div>
-			<br>
-			<br>
+				<br>
+				<br>
+
 		<?php
 $users= array();
 if((isset($_GET["q"]) && isset($_GET["pacient_id"]) && isset($_GET["medic_id"]) && isset($_GET["date_at"])) && ($_GET["q"]!="" || $_GET["pacient_id"]!="" || $_GET["medic_id"]!="" || $_GET["date_at"]!="") ) {
@@ -62,8 +63,8 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 			<th>Fecha</th>
 			<th>Hora</th>				
 			<th>Nombre del Paciente</th>
-			<th>Tipo de Estudio a realizar</th>
-			<th>Técnico asignado</th>
+			<th>Tipo de Estudio</th>
+			<th>Atendido por el Técnico</th>
 			<th>Ver</th>
 			</thead>
 			<?php
