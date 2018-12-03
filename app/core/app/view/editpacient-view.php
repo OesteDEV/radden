@@ -1,4 +1,6 @@
-<?php $user = PacientData::getById($_GET["id"]);?>
+<?php 
+$user = PacientData::getById($_GET["id"]);
+?>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
     <div class="card">

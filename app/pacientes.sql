@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2018 a las 00:32:51
+-- Tiempo de generación: 03-12-2018 a las 04:43:44
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -18,9 +18,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de datos: `pacientes`
---
 
 -- --------------------------------------------------------
 
@@ -96,8 +93,8 @@ CREATE TABLE `medic` (
 --
 
 INSERT INTO `medic` (`id`, `no`, `name`, `lastname`, `gender`, `day_of_birth`, `email`, `address`, `city`, `phone`, `matricula`, `image`, `is_active`, `created_at`, `category_id`) VALUES
-(1, NULL, 'Eliana', 'Pellejero', NULL, NULL, 'elu@elu.com', 'Marcos Paz', 'Arenales 540', '146546546', '12146', NULL, 1, '2018-11-14 20:18:04', NULL),
-(2, NULL, 'Trinidad', 'Amaya', NULL, NULL, 'trinidadamaya@hotmail.com', 'Marcos Paz', 'San juan 2028', '112416412', '11124', NULL, 1, '2018-11-14 20:18:52', NULL);
+(1, NULL, 'Eliana', 'Pellejero', NULL, NULL, 'eliana_pellejero@radiologiadental.com.ar', 'Marcos Paz', 'Arenales 540', '146546546', '12146', NULL, 1, '2018-11-14 20:18:04', NULL),
+(2, NULL, 'Trinidad', 'Amaya', NULL, NULL, 'trinidad_amaya@radiologiadental.com.ar', 'Marcos Paz', 'San juan 2028', '112416412', '11124', NULL, 1, '2018-11-14 20:18:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -125,15 +122,6 @@ CREATE TABLE `pacient` (
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `pacient`
---
-
-INSERT INTO `pacient` (`id`, `name`, `lastname`, `document`, `gender`, `day_of_birth`, `email`, `address`, `city`, `phone`, `coverage`, `image`, `sick`, `obra`, `is_favorite`, `is_active`, `created_at`) VALUES
-(8, 'Claudio Omar', 'Coronel Milla', '34331855', 'h', '1989-04-02', 'clau_coronelmilla@hotmail.com', 'Sarmiento 1279', 'Marcos Paz', '1160300122', 'o', NULL, '1274-4165', 'UTEDYC', 1, 1, '2018-11-14 19:54:48'),
-(9, 'Xoana', 'Maidana', '33524252', 'm', '1988-02-05', 'xoanagmaidana@hotmail.com', 'Reylli 60', 'Marcos Paz', '1140718507', 'o', NULL, '1245', 'IOMA', 1, 1, '2018-11-15 10:35:07');
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `payment`
@@ -149,7 +137,7 @@ CREATE TABLE `payment` (
 --
 
 INSERT INTO `payment` (`id`, `name`) VALUES
-(1, 'Pendiente'),
+(1, 'Pendiente de pago'),
 (2, 'Pagado'),
 (3, 'Anulado');
 
@@ -172,7 +160,9 @@ INSERT INTO `payment_type` (`id`, `name`) VALUES
 (1, 'Efectivo'),
 (2, 'Tarjeta de Credito'),
 (3, 'Tarjeta de Debito'),
-(4, 'Reintegro Obra Social');
+(4, 'Cobertura del 100%'),
+(5, 'Con descuento de Obra Social'),
+(6, 'Por reintegro');
 
 -- --------------------------------------------------------
 
@@ -199,16 +189,6 @@ CREATE TABLE `reservation` (
   `status_id` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `reservation`
---
-
-INSERT INTO `reservation` (`id`, `title`, `date_at`, `time_at`, `created_at`, `pacient_id`, `category_id`, `coverage_id`, `user_id`, `medic_id`, `price`, `info`, `is_web`, `payment_id`, `payment_type_id`, `status_id`) VALUES
-(6, NULL, '2018-11-27', '23:15', '2018-11-27 23:15:17', 8, 2, NULL, 1, 2, 100, '', 0, 2, 1, 3),
-(7, NULL, '2018-11-26', '17:20', '2018-11-27 23:28:28', 9, 2, NULL, 1, 1, 100, '', 0, 3, 1, 2),
-(8, NULL, '2018-11-28', '11:00', '2018-11-28 01:04:55', 8, 3, NULL, 1, 1, 550, '', 0, 1, 4, 3),
-(9, NULL, '2018-11-29', '19:00', '2018-11-29 19:35:44', 8, 4, 3, 1, 2, 225, NULL, 0, 1, 1, 1),
-(10, NULL, '2018-11-30', '12:00', '2018-11-29 19:46:25', 9, 6, 3, 1, 1, 430, NULL, 0, 1, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -226,10 +206,10 @@ CREATE TABLE `status` (
 --
 
 INSERT INTO `status` (`id`, `name`) VALUES
-(1, 'Pendiente'),
-(2, 'Aplicada'),
-(3, 'No asistio'),
-(4, 'Cancelada');
+(1, 'Turno Pendiente'),
+(2, 'Turno Aplicado'),
+(3, 'Sin asistir'),
+(4, 'Turno Cancelado');
 
 -- --------------------------------------------------------
 
@@ -368,7 +348,7 @@ ALTER TABLE `payment_type`
 -- AUTO_INCREMENT de la tabla `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `status`

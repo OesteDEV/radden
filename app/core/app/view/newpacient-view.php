@@ -82,18 +82,12 @@ $coverage = CoverageData::getAll();
         <div class="form-group">
           <label for="inputEmail1" class="col-md-4">Obra Social</label>
           <div class="col-md-8">
-          <select name="category_id" class="form-control">
+          <select name="obra" class="form-control" id="obra">
           <option value="">Seleccionar</option>      
           <?php foreach($coverage as $cov):?>
           <option value="<?php echo $cov->id; ?>"><?php echo $cov->name; ?></option>      
           <?php endforeach;?>
           </select>
-          </div>
-        </div> 
-        <div class="form-group">
-          <label for="inputEmail1" class="col-md-4 ">Obra Social</label>
-          <div class="col-md-8">
-            <input type="text" name="obra" class="form-control" id="obra" placeholder="Obra Social">
           </div>
         </div>
         <div class="form-group">
