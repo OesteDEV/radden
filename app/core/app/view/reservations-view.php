@@ -7,15 +7,14 @@
 			<div class="card-content table-responsive">
 				<div class="row">
 					<div class="col-md-2">
-						<a href="./index.php?view=newreservation" class="btn btn-block btn-primary"><i class='fa fa-plus-circle'></i> Nuevo Turno</a>
+						<a href="./index.php?view=newreservation" class="btn btn-block btn-primary"><i class='fa fa-plus-circle'></i> Nuevo Turno</a>						
 					</div>
 					<div class="col-md-2">
-						<a href="./index.php?view=oldreservations" class="btn btn-block btn-warning"><i class='fa fa-folder-open'></i> Anteriores</a>
-					</div>
+						<a href="./index.php?view=oldreservations" class="btn btn-block btn-warning"><i class='fa fa-folder-open'></i> Anteriores</a>						
+					</div>					
 				</div>
-				<br>
-				<br>
-
+			<br>
+			<br>
 		<?php
 $users= array();
 if((isset($_GET["q"]) && isset($_GET["pacient_id"]) && isset($_GET["medic_id"]) && isset($_GET["date_at"])) && ($_GET["q"]!="" || $_GET["pacient_id"]!="" || $_GET["medic_id"]!="" || $_GET["date_at"]!="") ) {
@@ -63,21 +62,18 @@ if($_GET["q"]!=""||$_GET["pacient_id"]!="" ||$_GET["medic_id"]!="" ){
 			<th>Fecha</th>
 			<th>Hora</th>				
 			<th>Nombre del Paciente</th>
-			<th>Tipo de Estudio</th>
-			<th>Atendido por el Técnico</th>
+			<th>Técnico asignado</th>
 			<th>Ver</th>
 			</thead>
 			<?php
 			foreach($users as $user){
 				$pacient  = $user->getPacient();
 				$medic = $user->getMedic();
-				$category = $user->getCategory();
 				?>
 				<tr>
 				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
 				<td><?php echo $user->time_at; ?></td>					
 				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
-				<td><?php echo $category->name; ?></td>
 				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
 				<td style="width:50px;">
 				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-success btn-xs"><i class='fa fa-eye'></i></a>

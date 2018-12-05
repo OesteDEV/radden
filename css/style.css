@@ -112,7 +112,6 @@ hr {
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #67865500;
-    border-color: #c1c1c1;
     border-radius: 8px;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {

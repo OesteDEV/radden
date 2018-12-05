@@ -7,9 +7,9 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" / >
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="assets/css/material-dashboard.css" rel="stylesheet"/>
-  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>  
   <script src="assets/js/jquery.min.js" type="text/javascript"></script>
   <?php if(isset($_GET["view"]) && $_GET["view"]=="home"):?>
   <link href='assets/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
@@ -19,7 +19,16 @@
   <?php endif; ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
+  <script>
+    function printDiv(divName) {
+       var printContents = document.getElementById(divName).innerHTML;
+       var originalContents = document.body.innerHTML;
+       document.body.innerHTML = printContents;
+       window.print();
+       document.body.innerHTML = originalContents;
+  }
+  </script> 
 </head>
 
 <body>

@@ -8,15 +8,6 @@ $payments_types = Payment_typeData::getAll();
 $categories = CategoryData::getAll();
 $coverages = CoverageData::getAll();
 ?>
-<script>
-  function printDiv(divName) {
-     var printContents = document.getElementById(divName).innerHTML;
-     var originalContents = document.body.innerHTML;
-     document.body.innerHTML = printContents;
-     window.print();
-     document.body.innerHTML = originalContents;
-}
-</script>
 <div class="card">
   <div class="row">
     <div class="card-header" data-background-color="blue">
@@ -26,8 +17,9 @@ $coverages = CoverageData::getAll();
       <div class="card">
         <div class="card-content table-responsive">
           <form class="form-horizontal" role="form" method="post" action="./?action=updatereservation">
+            <div id="divName">
             <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Paciente *</label>
+              <label for="inputEmail1" class="col-md-4">Paciente</label>
               <div class="col-md-8">
                 <select name="pacient_id" class="form-control" required disabled>
                 <option value="">Seleccionar</option>
@@ -38,7 +30,7 @@ $coverages = CoverageData::getAll();
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Tipo de Estudio *</label>
+              <label for="inputEmail1" class="col-md-4">Tipo de Estudio</label>
               <div class="col-md-8">
               <select name="category_id" class="form-control" required disabled>
               <option value="">Seleccionar</option>      
@@ -49,7 +41,7 @@ $coverages = CoverageData::getAll();
               </div>
             </div> 
             <div class="form-group">
-              <label for="inputEmail1" class="col-md-4">Medico *</label>
+              <label for="inputEmail1" class="col-md-4">Tecnico</label>
               <div class="col-md-8">
                 <select name="medic_id" class="form-control">
                   <option value="">Seleccionar</option>
@@ -122,6 +114,7 @@ $coverages = CoverageData::getAll();
               <div class="col-md-8">
               <textarea rows="5" class="form-control" name="info" placeholder="Informe" value="<?php echo $reservation->info;?>"></textarea>
               </div>
+            </div>              
             </div>
             <div class="form-group">
               <div class="row">
@@ -130,7 +123,7 @@ $coverages = CoverageData::getAll();
                   <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-retweet"></i> Actualizar Cita </button>
                 </div>
                 <div class="col-md-4">
-                  <a type="button" class="btn btn-primary btn-lg btn-block" onclick="printDiv('printableArea')" value="Imprimir Constancia"><i class="fa fa-print"></i> Imprimir Constancia</a>
+                  <a type="button" class="btn btn-primary btn-lg btn-block" onclick="printDiv('divName')" value="Imprimir Constancia"><i class="fa fa-print"></i> Imprimir Constancia</a>
                 </div>
                 <div class="col-md-4">
                   <a href="index.php?action=delreservation&id=<?php echo $reservation->id;?>" class="btn btn-primary btn-lg btn-block"><i class="fa fa-trash"></i> Eliminar Turno</a>

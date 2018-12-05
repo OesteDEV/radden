@@ -18,16 +18,15 @@ $word = new  PhpOffice\PhpWord\PhpWord();
 $alumns = $_SESSION["report_data"];
 
 $section1 = $word->AddSection();
-$section1 = $word->AddSection();
-
-$section1->addText("REPORTE",array("size"=>22,"bold"=>true,"align"=>"right"));
 $section1->addImage(
     '../img/header-bg.jpg',
     array(
-        'width'=> 150,
-        'height'=> 100,
+        'width'         => 300,
+        'height'        => 200,
     )
 );
+$section1->addText("RADIOLOGIA DENTAL",array("size"=>22,"bold"=>true,"align"=>"right"));
+
 
 $styleTable = array('borderSize' => 6, 'borderColor' => '888888', 'cellMargin' => 40);
 $styleFirstRow = array('borderBottomColor' => '0000FF', 'bgColor' => 'AAAAAA');

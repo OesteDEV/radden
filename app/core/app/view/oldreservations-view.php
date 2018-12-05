@@ -19,20 +19,17 @@
 			<th>Hora</th>				
 			<th>Nombre del Paciente</th>
 			<th>Tipo de Estudio</th>
-			<th>Atendido por el Técnico</th>
 			<th>Ver</th>
 			</thead>
 			<?php
 			foreach($users as $user){
 				$pacient  = $user->getPacient();
 				$medic = $user->getMedic();
-				$category = $user->getCategory();
 				?>
 				<tr>
 				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
 				<td><?php echo $user->time_at; ?></td>					
 				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
-				<td><?php echo $category->name; ?></td>
 				<td><?php echo $medic->lastname." ".$medic->name; ?></td>				
 				<td style="width:50px;">
 				<a href="index.php?view=editreservation&id=<?php echo $user->id;?>" class="btn btn-success btn-xs"><i class='fa fa-eye'></i></a>
