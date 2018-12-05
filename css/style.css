@@ -82,6 +82,7 @@ hr {
 }
 #menu.navbar-default {
     margin-bottom: 0px;
+    border-color: whitesmoke;
 }
 #menu a.navbar-brand {
     font-size: 18px;
@@ -91,9 +92,11 @@ hr {
 	color: #88bb45;
 }
 #menu.navbar-default .navbar-nav > li > a {
-    color: #8a82b1;
-    font-size: 14px;
+    color: #70c792;
+    font-size: 12px;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
     color: #4d295f;
@@ -108,7 +111,6 @@ hr {
 }
 .navbar-toggle {
 	border-radius: 8px;
-	border-color: #f7f7f7;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #67865500;
@@ -180,7 +182,6 @@ header p {
     margin-top: 20px;
     margin-bottom: 30px;
     font-family: sans-serif;
-    font-weight: 500;
 }
 /* Team Section */
 #team-section {
@@ -340,7 +341,7 @@ ol.type li a:hover {
 #contact-section {
     padding-top: 3em;
     padding-bottom: 5em;
-    background-color: #8d81b58f;
+    background-color: #ffffff;
 }
 #contact-section form {
 	padding: 30px 0;
@@ -421,15 +422,15 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* Footer */
 #footer {
-    background-color: #8cc2a0;
-    color: #d0cdcd;
-    padding-top: 2em;
-    padding-bottom: 1em;
+    background-color: #6c52c38f;
+    /* color: #009688; */
+    padding-top: 4em;
+    padding-bottom: 3em;
 }
 #footer p {
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 10px;
-    color: #000000;
+    color: #ffffff;
 }
 #footer a {
 	color: #aaa;
@@ -437,6 +438,11 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #footer a:hover, #footer a:focus {
 	text-decoration: none;
 	color: #71bd46;
+}
+#footer2 {
+    background-color: #6c619a;
+    color: #f3f2f1;
+    padding: 11px;
 }
 
 @media (max-width: 768px) {
@@ -600,11 +606,11 @@ background: #428bca;
 }
 #hours-section {
     padding: 40px 0;
-    background-color: #eaeaea;
-    color: #292525;
+    background-color: #ffffffe3;
+    color: #000000;
 }
-#hours-section p{
-    color: #292525;
+#hours-section p {
+    color: #000000;
 }
 header {
     background-color: white;

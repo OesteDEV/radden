@@ -16,9 +16,8 @@
 				<table class="table table-bordered table-hover">
 				<thead>
 				<th>Nombre completo</th>
-				<th>Direccion</th>
 				<th>Email</th>
-				<th>Telefono</th>
+				<th>Matricula N°</th>
 				<th></th>
 				</thead>
 				<?php
@@ -26,7 +25,6 @@
 					?>
 					<tr>
 						<td><?php echo $user->lastname." ".$user->name; ?></td>
-						<td><?php echo $user->address; ?></td>
 						<td><?php echo $user->email; ?></td>
 						<td><?php echo $user->phone; ?></td>
 						<td style="width:150px;">

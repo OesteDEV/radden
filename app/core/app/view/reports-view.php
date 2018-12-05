@@ -29,7 +29,7 @@
 					</div>
 					<div class="col-md-2">
 						<div class="input-group">
-						  <span >Médico</span>
+						  <span >Técnico</span>
 							<select name="medic_id" class="form-control">
 							<option value="">Seleccionar</option>
 							  <?php foreach($medics as $p):?>

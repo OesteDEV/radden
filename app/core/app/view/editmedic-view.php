@@ -35,7 +35,7 @@ $categories = CategoryData::getAll();
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail1" class="col-md-4">Telefono</label>
+            <label for="inputEmail1" class="col-md-4">Matricula N°</label>
             <div class="col-md-8">
               <input type="text" name="phone"  value="<?php echo $user->phone;?>"  class="form-control" id="inputEmail1" placeholder="Telefono">
             </div>

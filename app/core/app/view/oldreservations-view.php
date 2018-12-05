@@ -18,7 +18,7 @@
 			<th>Fecha</th>
 			<th>Hora</th>				
 			<th>Nombre del Paciente</th>
-			<th>Tipo de Estudio</th>
+			<th>Técnico asignado</th>
 			<th>Ver</th>
 			</thead>
 			<?php

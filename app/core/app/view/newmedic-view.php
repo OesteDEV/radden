@@ -57,7 +57,7 @@ $categories = CategoryData::getAll();
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail1" class="col-md-4">Matrícula N/P:</label>
+            <label for="inputEmail1" class="col-md-4">Matrícula N°</label>
             <div class="col-md-8">
               <input type="text" name="matricula" class="form-control" id="matricula" placeholder="Número de Matrícula">
             </div>

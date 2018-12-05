@@ -16,11 +16,7 @@ Autoloader::register();
 $word = new  PhpOffice\PhpWord\PhpWord();
 
 $alumns = $_SESSION["report_data"];
-
-$section1 = $word->AddSection();
-$section1 = $word->AddSection();
-
-$section1->addText("REPORTE",array("size"=>22,"bold"=>true,"align"=>"right"));
+$section1 = $word->AddSection(array('orientation'=>'landscape'));
 $section1->addImage(
     '../img/header-bg.jpg',
     array(
@@ -30,24 +26,22 @@ $section1->addImage(
 );
 
 $styleTable = array('borderSize' => 6, 'borderColor' => '888888', 'cellMargin' => 40);
-$styleFirstRow = array('borderBottomColor' => '0000FF', 'bgColor' => 'AAAAAA');
+$styleFirstRow = array('borderBottomColor' => '0000FF', 'bgColor' => 'd9b3ff');
 
 $table1 = $section1->addTable("table1");
 $table1->addRow();
-$table1->addCell()->addText("Asunto");
 $table1->addCell()->addText("Paciente");
-$table1->addCell()->addText("Medico");
+$table1->addCell()->addText("Atendido por");
 $table1->addCell()->addText("Fecha");
-$table1->addCell()->addText("Estado");
-$table1->addCell()->addText("Pago");
-$table1->addCell()->addText("Costo");
+$table1->addCell()->addText("Estado del Turno");
+$table1->addCell()->addText("Pago del Estudio");
+$table1->addCell()->addText("Importe");
 
 $total = 0;
 foreach($alumns as $al){
 	$medic = $al->getMedic();
 	$pacient = $al->getPacient();
 $table1->addRow();
-$table1->addCell(3000)->addText($al->title);
 $table1->addCell(3000)->addText($pacient->name." ".$pacient->lastname);
 $table1->addCell(3000)->addText($medic->name." ".$medic->lastname);
 $table1->addCell(3000)->addText($al->date_at." ".$al->time_at);
