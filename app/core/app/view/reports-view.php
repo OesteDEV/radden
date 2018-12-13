@@ -129,16 +129,16 @@ if(count($users)>0){
 	// si hay usuarios
 	$_SESSION["report_data"] = $users;
 	?>
-	<div class="panel panel-default">
+	<div id="divName" class="panel panel-default">
 		<div class="panel-heading">Reportes</div>
 		<table class="table table-bordered table-hover">
 			<thead>
 				<th>Paciente</th>
 				<th>Atendido por</th>
-				<th>Forma de pago</th>
 				<th>Fecha</th>
+				<th>hora</th>
 				<th>Estado</th>
-				<th>Pago</th>
+				<th>Pago en</th>
 				<th>Costo</th>
 			</thead>
 			<?php
@@ -151,10 +151,10 @@ if(count($users)>0){
 				<tr>
 				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
 				<td><?php echo $medic->name." ".$medic->lastname; ?></td>
-				<td><?php echo $coverage->name; ?></td>
-				<td><?php echo $user->date_at." ".$user->time_at; ?></td>
+				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
+				<td><?php echo $user->time_at; ?></td>
 				<td><?php echo $user->getStatus()->name; ?></td>
-				<td><?php echo $user->getPayment()->name; ?></td>
+				<td><?php echo $user->getPayment_type()->name; ?></td>
 				<td>$ <?php echo number_format($user->price,2,".",",");?>						
 				<?php
 				$total += $user->price;}
@@ -162,10 +162,10 @@ if(count($users)>0){
 				?></td>
 				</tr>
 		</table>
-	</div>
-	<div class="panel-bodys">
 		<h3>Total: $ <?php echo number_format($total,2,".",",");?></h3>
-		<a href="./report/report-word.php"><i class="fa fa-download"> Descargar (.docx)</i></a>
+	</div>
+	<div class="panel-bodys">		
+		<a type="button" class="btn btn-primary btn-lg btn-block" onclick="printDiv('divName')" value="Imprimir Constancia"><i class="fa fa-print"></i> Imprimir Reporte</a>
 	</div>
 	<?php
 	}else{

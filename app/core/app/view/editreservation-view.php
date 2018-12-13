@@ -112,7 +112,13 @@ $coverages = CoverageData::getAll();
             <div class="form-group">
               <label for="inputEmail1" class="col-md-4">Informe</label>
               <div class="col-md-8">
-              <textarea rows="5" class="form-control" name="info" placeholder="Informe" value="<?php echo $reservation->info;?>"></textarea>
+              <textarea rows="5" class="form-control" name="info" id="medic"><?php echo $reservation->info;?></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail1" class="col-md-4">Médico Solicitante</label>
+              <div class="col-md-8">
+              <input type="text" name="medic" class="form-control" value="<?php echo $reservation->medic;?>" id="medic" placeholder="Médico Solicitante">
               </div>
             </div>              
             </div>

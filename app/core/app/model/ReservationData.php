@@ -13,7 +13,7 @@ class reservationData {
 
 	public function getPacient(){ return PacientData::getById($this->pacient_id); }
 	public function getMedic(){ return MedicData::getById($this->medic_id); }
-	public function getcategory(){ return categoryData::getById($this->category_id); }
+	public function getCategory(){ return CategoryData::getById($this->category_id); }
 	public function getStatus(){ return StatusData::getById($this->status_id); }
 	public function getPayment(){ return PaymentData::getById($this->payment_id); }
 	public function getPayment_type(){ return Payment_typeData::getById($this->payment_type_id); }
@@ -36,7 +36,7 @@ class reservationData {
 
 // partiendo de que ya tenemos creado un objecto reservationData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set pacient_id=\"$this->pacient_id\",medic_id=\"$this->medic_id\",category_id=\"$this->category_id\",date_at=\"$this->date_at\",time_at=\"$this->time_at\",status_id=\"$this->status_id\" ,coverage_id=\"$this->coverage_id\",payment_id=\"$this->payment_id\",payment_type_id=\"$this->payment_type_id\",price=\"$this->price\",info=\"$this->info\" where id=$this->id";
+		$sql = "update ".self::$tablename." set pacient_id=\"$this->pacient_id\",medic_id=\"$this->medic_id\",category_id=\"$this->category_id\",date_at=\"$this->date_at\",time_at=\"$this->time_at\",status_id=\"$this->status_id\" ,coverage_id=\"$this->coverage_id\",payment_id=\"$this->payment_id\",payment_type_id=\"$this->payment_type_id\",price=\"$this->price\",medic=\"$this->medic\",info=\"$this->info\" where id=$this->id";
 		Executor::doit($sql);
 	}
 

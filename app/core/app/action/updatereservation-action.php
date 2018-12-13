@@ -9,6 +9,7 @@ if(count($_POST)>0){
 	$user->payment_id = $_POST["payment_id"];
 	$user->payment_type_id = $_POST["payment_type_id"];
 	$user->price = $_POST["price"];
+	$user->medic = $_POST["medic"];
 	$user->info = $_POST["info"];
 	$user->update();
 

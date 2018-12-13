@@ -16,11 +16,13 @@ $pacient = PacientData::getById($_GET["id"]);
 			?>
 			<table class="table table-bordered table-hover">
 			<thead>
-			<th>Tipo de Estudio</th>
-			<th>Atendido por el Técnico</th>
 			<th>Fecha</th>
 			<th>Hora</th>
+			<th>Nombre del Paciente</th>
+			<th>Técnico asignado</th>
+			<th>Estudio Realizado</th>
 			<th>Pagado en</th>
+			<th>Importe Abonado</th>
 			</thead>
 			<?php
 			foreach($users as $user){
@@ -30,11 +32,13 @@ $pacient = PacientData::getById($_GET["id"]);
 				$payment_type = $user->getPayment_type();
 				?>
 				<tr>
-				<td><?php echo $category->name; ?></td>
-				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
 				<td><?php $nueva_fecha = date("d-m-Y",strtotime($user->date_at)); echo $nueva_fecha; ?></td>
 				<td><?php echo $user->time_at; ?></td>
+				<td><?php echo $pacient->lastname." ".$pacient->name; ?></td>
+				<td><?php echo $medic->lastname." ".$medic->name; ?></td>
+				<td><?php echo $category->name; ?></td>
 				<td><?php echo $payment_type->name; ?></td>
+				<td>$ <?php echo $user->price; ?></td>
 				</tr>
 				<?php
 
